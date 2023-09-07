@@ -1,0 +1,52 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100vw;
+  border: 5px solid rgb(246, 193, 20);
+  overflow:hidden;
+}
+
+.footer {
+ background-color: gray !important;
+ width: 100%;
+ padding-top: 4px;
+ padding-bottom: 4px;
+ height: 30px;
+}
+
+.wrapper {
+flex: 1;
+display: grid;
+grid-template-rows: repeat(auto-fill, minmax(50px, 150px));
+grid-template-columns: repeat(auto-fill, minmax(50px, 150px));
+grid-auto-flow: column;
+border: blueviolet 3px solid;
+margin:5px;
+width: 100%;
+margin-bottom: 40px;
+}
+
+.folder {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100px;
+  height: 100px;
+}
+
+/* .folderDisplay {
+  height: 100%;
+} */
+
+.window {
+width: 400px;
+height: 600px;
+background-color: white;
+position: absolute;
+transform: translate(-50%, -50%);
+top: 50%;
+left: 50%;
+}
