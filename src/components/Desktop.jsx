@@ -1,5 +1,4 @@
 import React from "react";
-
 import Shortcurts from "./Shortcuts";
 import Footer from "../components/Footer";
 import Windows from "../components/Windows";
@@ -12,7 +11,7 @@ const [activeWindows, setActiveWindows] = useState([]);
     <>
     < Shortcurts activeWindows={activeWindows} setActiveWindows={setActiveWindows}/>
     < Windows activeWindows={activeWindows} setActiveWindows={setActiveWindows}/>
-    < Footer />
+    < Footer activeWindows={activeWindows} setActiveWindows={setActiveWindows}/>
     </>
   );
 };

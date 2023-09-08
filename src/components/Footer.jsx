@@ -1,9 +1,12 @@
 import React from 'react';
+import Miniature from './Miniature';
 import "../App.css";
 
-const Footer = () => {
+const Footer = (activeWindows, setActiveWindows) => {
     return (
-        <div className="footer">this is the footer</div>
+        <>
+        <div className="footer">Home<Miniature activeWindows={activeWindows} setActiveWindows={setActiveWindows}/></div>
+        </>
     );
   };
   

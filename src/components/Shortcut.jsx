@@ -1,5 +1,5 @@
 import React from "react";
-
+ 
 const Shortcut = ({ page, activeWindows, setActiveWindows }) => {
 
   function openWindow() {
@@ -25,6 +25,7 @@ const Shortcut = ({ page, activeWindows, setActiveWindows }) => {
     console.log(clickedWindows, "2) clickedWindows com unshift");
   }
 
+  //function to change the heigth and width of the windows
 
 
   return (

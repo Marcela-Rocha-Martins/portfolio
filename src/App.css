@@ -9,10 +9,19 @@
 
 .footer {
  background-color: gray !important;
+ display: flex;
  width: 100%;
  padding-top: 4px;
  padding-bottom: 4px;
  height: 30px;
+}
+
+.miniatures {
+  background-color: white;
+  width: 100px;
+  margin-left: 8px;
+  font-size: 15px;
+  text-align: center;
 }
 
 .wrapper {
@@ -37,16 +46,10 @@ margin-bottom: 40px;
   height: 100px;
 }
 
-/* .folderDisplay {
-  height: 100%;
-} */
-
 .window {
 width: 400px;
 height: 600px;
 background-color: white;
 position: absolute;
 transform: translate(-50%, -50%);
-top: 50%;
-left: 50%;
 }
