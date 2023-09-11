@@ -11,11 +11,11 @@ const shortcutList = [
     {name:"Bin", id: "bin"}
 ];
 
-const Shortcurts = ({activeWindows, setActiveWindows}) => {
+const Shortcurts = ({activeWindows, setActiveWindows, zIndex, setZIndex }) => {
 
   return (
     <div className="wrapper">
-      {shortcutList.map((page) => <Shortcut key={page.id} page={page} activeWindows={activeWindows} setActiveWindows={setActiveWindows}/>)}
+      {shortcutList.map((page) => <Shortcut key={page.id} page={page} activeWindows={activeWindows} setActiveWindows={setActiveWindows} zIndex={zIndex} setZIndex={setZIndex}/>)}
     </div>
   );
 };

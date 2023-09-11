@@ -1,9 +1,10 @@
 import React from "react";
 
-function Miniature(activeWindows, setActiveWindows) {
+function Miniature({page}) {
 
-  return <div className="miniatures">miniature</div>;
-
+  return (
+  <div className="miniatures">{page.name}</div>
+  )
 }
 
 export default Miniature;
