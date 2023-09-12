@@ -12,9 +12,8 @@ const Miniature = ({
 }) => {
 
   function changingWindow() {
-
-   
-
+// se tiver false(ou seja, hidden), muda para visible
+// se tiver true(ou seja, visivel), muda o z-index para o max+1
   }
 
   return (

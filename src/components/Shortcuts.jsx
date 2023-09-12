@@ -19,8 +19,11 @@ const Shortcurts = ({
   maxZIndex,
   setMaxZIndex,
   minimized,
-  setMinimized
-  
+  setMinimized,
+  isVisible,
+  setIsVisible,
+
+
 }) => {
   return (
     <div className="wrapper">
@@ -36,6 +39,8 @@ const Shortcurts = ({
           setMaxZIndex={setMaxZIndex}
           minimized={minimized}
           setMinimized={setMinimized}
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
         />
       ))}
     </div>

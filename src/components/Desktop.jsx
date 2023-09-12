@@ -22,6 +22,7 @@ const Desktop = () => {
         maxZIndex={maxZIndex}
         setMaxZIndex={setMaxZIndex}
         minimized={minimized}
+        isVisible={isVisible}
         setIsVisible={setIsVisible}
       />
       <Windows

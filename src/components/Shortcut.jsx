@@ -6,6 +6,8 @@ const Shortcut = ({
   setActiveWindows,
   maxZIndex,
   setMaxZIndex,
+  isVisible,
+  setIsVisible,
 
 }) => {
 
@@ -28,13 +30,13 @@ const Shortcut = ({
         console.log("zIndex: ", clickedWindows[i].zIndex)
       }
     }
-    if (!equalsId == true) {
+    if (!equalsId === true) {
       
       const newZIndex = maxZIndex + 1;
 
       setMaxZIndex(newZIndex);
 
-      const updatedPage = { ...page, zIndex: newZIndex };
+      const updatedPage = { ...page, zIndex: newZIndex, isVisible: true };
 
       clickedWindows.push(updatedPage);
 
@@ -42,6 +44,7 @@ const Shortcut = ({
     
     } 
     setActiveWindows(clickedWindows);
+    setIsVisible(true);
   }
 
   return (
