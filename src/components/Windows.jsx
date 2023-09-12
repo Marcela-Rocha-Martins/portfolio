@@ -7,7 +7,7 @@ const Windows = ({ activeWindows, setActiveWindows, zIndex, setZIndex }) => {
     <>
       {activeWindows.map((window, index) => (
         <Window
-          key={window.id}
+          key={`${window.id}-windows`}
           page={window}
           setActiveWindows={setActiveWindows}
           activeWindows={activeWindows}

@@ -11,8 +11,8 @@ function Window({ page, index, activeWindows, setActiveWindows, zIndex }) {
   }
 
   return (
-    <div className="window" style={{top: `${50 + (5 * index)}%`, left: `${50 + (5 * index)}%`, zIndex}}>
-      This is the {page.name} window {index}
+    <div className="window" style={{top: `${50 + (5 * index)}%`, left: `${50 + (5 * index)}%`, zIndex: page.zIndex}}>
+      This is the {page.name} window {index} and the zindex is {page.zIndex}
       <button onClick={closeWindow}>x</button>
     </div>
   );

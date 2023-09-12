@@ -1,28 +1,49 @@
 import React from "react";
- 
-const Shortcut = ({ page, activeWindows, setActiveWindows }) => {
+
+const Shortcut = ({
+  page,
+  activeWindows,
+  setActiveWindows,
+  zIndex,
+  setZIndex,
+  maxZIndex,
+  setMaxZIndex,
+
+}) => {
 
   function openWindow() {
-
-    //function to set the logic behind the window views
-
+    
     const clickedWindows = [...activeWindows];
+    
+    let equalsId = false;
 
-    let index = activeWindows.indexOf(page);
+    for (let i = 0; i < clickedWindows.length; i++) {
 
-    if (index < 0) {
+      if (clickedWindows[i].id === page.id) {
 
-      clickedWindows.push(page);
+        equalsId = true;
 
-    } else {
+        let newZIndex = maxZIndex + 1;
 
-      clickedWindows.splice(index, 1);
+        clickedWindows[i].zIndex = newZIndex
 
-      clickedWindows.push(page);
+        console.log("zIndex: ", clickedWindows[i].zIndex)
+      }
     }
+    if (!equalsId == true) {
+      
+      const newZIndex = maxZIndex + 1;
 
+      setMaxZIndex(newZIndex);
+
+      const updatedPage = { ...page, zIndex: newZIndex };
+
+      clickedWindows.push(updatedPage);
+
+      // console.log (updatedPage, "updatedPage");
+    
+    } 
     setActiveWindows(clickedWindows);
-    console.log(clickedWindows, "2) clickedWindows com unshift");
   }
 
   return (
