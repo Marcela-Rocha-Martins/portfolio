@@ -1,10 +1,27 @@
 import React from "react";
 
-function Miniature({page}) {
+const Miniature = ({
+  page,
+  activeWindows,
+  setActiveWindows,
+  maxZIndex,
+  setMaxZIndex,
+  isVisible,
+  setIsVisible,
+
+}) => {
+
+  function changingWindow() {
+
+   
+
+  }
 
   return (
-  <div className="miniatures">{page.name}</div>
-  )
-}
+    <button onClick={changingWindow} className="miniatures">
+      {page.name}
+    </button>
+  );
+};
 
 export default Miniature;

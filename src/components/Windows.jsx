@@ -1,8 +1,16 @@
 import React from "react";
 import Window from "./Window";
 
-const Windows = ({ activeWindows, setActiveWindows, zIndex, setZIndex }) => {
-
+const Windows = ({
+  activeWindows,
+  setActiveWindows,
+  zIndex,
+  setZIndex,
+  minimized,
+  setMinimized,
+  isVisible,
+  setIsVisible,
+}) => {
   return (
     <>
       {activeWindows.map((window, index) => (
@@ -12,8 +20,12 @@ const Windows = ({ activeWindows, setActiveWindows, zIndex, setZIndex }) => {
           setActiveWindows={setActiveWindows}
           activeWindows={activeWindows}
           index={index}
-          zIndex={zIndex} 
-          setZIndex={setZIndex} 
+          zIndex={zIndex}
+          setZIndex={setZIndex}
+          minimized={minimized}
+          setMinimized={setMinimized}
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
         />
       ))}
     </>

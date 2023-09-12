@@ -4,8 +4,6 @@ const Shortcut = ({
   page,
   activeWindows,
   setActiveWindows,
-  zIndex,
-  setZIndex,
   maxZIndex,
   setMaxZIndex,
 
