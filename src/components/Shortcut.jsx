@@ -6,9 +6,6 @@ const Shortcut = ({
   setActiveWindows,
   maxZIndex,
   setMaxZIndex,
-  isVisible,
-  setIsVisible,
-
 }) => {
 
   function openWindow() {
@@ -44,7 +41,6 @@ const Shortcut = ({
     
     } 
     setActiveWindows(clickedWindows);
-    setIsVisible(true);
   }
 
   return (

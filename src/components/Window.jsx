@@ -5,6 +5,7 @@ const Window = ({
   index,
   activeWindows,
   setActiveWindows,
+  isVisible,
 }) => {
 
   function closeWindow() {
@@ -19,7 +20,7 @@ const Window = ({
     let index = clickedWindowstoMin.indexOf(page);
     clickedWindowstoMin[index].isVisible = false;
     setActiveWindows(clickedWindowstoMin);
-  }
+  }   
 
   if (activeWindows[index].isVisible) return (
     <div

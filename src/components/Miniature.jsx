@@ -5,6 +5,7 @@ const Miniature = ({
   activeWindows,
   setActiveWindows,
   maxZIndex,
+  index,
   setMaxZIndex,
   isVisible,
   setIsVisible,
@@ -12,9 +13,42 @@ const Miniature = ({
 }) => {
 
   function changingWindow() {
-// se tiver false(ou seja, hidden), muda para visible
-// se tiver true(ou seja, visivel), muda o z-index para o max+1
+    const updatedActiveWindows = [...activeWindows];
+    let index = updatedActiveWindows.indexOf(page);
+    if (updatedActiveWindows[index].isVisible) {
+      return {
+        ...page,
+        isVisible: true,
+      };
+    } else if (isVisible) {
+      let newZIndex = maxZIndex + 4;
+      return {
+        ...page,
+        zIndex: newZIndex,
+      };
+    }
+    setActiveWindows(updatedActiveWindows);
+    setIsVisible(true);
   }
+
+//   const updatedActiveWindows = activeWindows.map((window) => {
+//     if (!window.isVisible) {
+//       return {
+//         ...window,
+//         isVisible: true,
+//       };
+//     } else if (isVisible){
+//       let newZIndex = maxZIndex + 4;
+//       return {
+//         ...window,
+//         zIndex: newZIndex,
+//       };
+//     }
+//   });
+
+//   setActiveWindows(updatedActiveWindows);
+//   setIsVisible(true);
+// }
 
   return (
     <button onClick={changingWindow} className="miniatures">
