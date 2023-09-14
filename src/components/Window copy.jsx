@@ -1,5 +1,5 @@
 import React from "react";
-import Draggable from "react-draggable";
+import Draggable from 'react-draggable';
 
 const Window = ({
   page,
@@ -35,29 +35,20 @@ const Window = ({
 
   if (activeWindows[index].isVisible)
     return (
-      <Draggable
-        defaultPosition={{
-          x: ((50 + 5 * index) * window.innerWidth) / 100,
-          y: ((50 + 5 * index) * window.innerHeight) / 100,
+      <div
+        className="window"
+        style={{
+          top: `${50 + 5 * index}%`,
+          left: `${50 + 5 * index}%`,
+          zIndex: page.zIndex,
+          visibility: page.isVisible ? "visible" : "hidden",
         }}
-        handle=".handle"
+        onClick={handleWindowClick}
       >
-        <div
-          className="window"
-          style={{
-            zIndex: page.zIndex,
-            visibility: page.isVisible ? "visible" : "hidden",
-          }}
-          onClick={handleWindowClick}
-        >
-          <div className="handle" style={{ backgroundColor: "red" }}>
-            Oi
-          </div>
-          This is the {page.name} window {index} and the zindex is {page.zIndex}
-          <button onClick={closeWindow}>x</button>
-          <button onClick={minimizeWindow}>-</button>
-        </div>
-      </Draggable>
+        This is the {page.name} window {index} and the zindex is {page.zIndex}
+        <button onClick={closeWindow}>x</button>
+        <button onClick={minimizeWindow}>-</button>
+      </div>
     );
 };
 

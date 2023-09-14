@@ -52,4 +52,5 @@ height: 600px;
 background-color: white;
 position: absolute;
 transform: translate(-50%, -50%);
+border: 2px solid black;
 }

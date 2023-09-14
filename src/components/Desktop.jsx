@@ -34,6 +34,8 @@ const Desktop = () => {
         setMinimized={setMinimized}
         isVisible={isVisible}
         setIsVisible={setIsVisible}
+        maxZIndex={maxZIndex}
+        setMaxZIndex={setMaxZIndex}
       />
       <Footer
         activeWindows={activeWindows}

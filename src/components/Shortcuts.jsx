@@ -1,5 +1,6 @@
 import React from "react";
 import Shortcut from "./Shortcut";
+import NewComponent from "./NewComponent";
 
 const shortcutList = [
   { name: "My Computer", id: "my-computer" },
@@ -42,6 +43,7 @@ const Shortcurts = ({
           isVisible={isVisible}
           setIsVisible={setIsVisible}
         />
+
       ))}
     </div>
   );

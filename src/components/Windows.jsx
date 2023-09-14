@@ -10,6 +10,8 @@ const Windows = ({
   setMinimized,
   isVisible,
   setIsVisible,
+  maxZIndex,
+  setMaxZIndex,
 }) => {
   return (
     <>
@@ -26,6 +28,8 @@ const Windows = ({
           setMinimized={setMinimized}
           isVisible={isVisible}
           setIsVisible={setIsVisible}
+          maxZIndex={maxZIndex}
+          setMaxZIndex={setMaxZIndex}
         />
       ))}
     </>
