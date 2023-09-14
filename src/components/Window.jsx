@@ -5,7 +5,8 @@ const Window = ({
   index,
   activeWindows,
   setActiveWindows,
-  isVisible,
+  maxZIndex,
+  setMaxZIndex,
 }) => {
 
   function closeWindow() {
@@ -22,6 +23,11 @@ const Window = ({
     setActiveWindows(clickedWindowstoMin);
   }   
 
+  function handleWindowClick() {
+    console.log("a janela foi clicada!!!!!")
+
+  }
+
   if (activeWindows[index].isVisible) return (
     <div
       className="window"
@@ -31,6 +37,7 @@ const Window = ({
         zIndex: page.zIndex,
         visibility: page.isVisible ? "visible" : "hidden",
       }}
+      onClick={handleWindowClick}
     >
       This is the {page.name} window {index} and the zindex is {page.zIndex}
       <button onClick={closeWindow}>x</button>
