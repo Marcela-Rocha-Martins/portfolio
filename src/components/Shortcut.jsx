@@ -23,6 +23,8 @@ const Shortcut = ({
         let newZIndex = maxZIndex + 1;
 
         clickedWindows[i].zIndex = newZIndex
+        
+        setMaxZIndex(newZIndex);
 
         console.log("zIndex: ", clickedWindows[i].zIndex)
       }
