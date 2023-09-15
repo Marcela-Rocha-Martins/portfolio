@@ -47,10 +47,14 @@ margin-bottom: 60px;
 }
 
 .window {
-width: 400px;
-height: 600px;
 background-color: white;
 position: absolute;
-transform: translate(-50%, -50%);
 border: 2px solid black;
+}
+
+.homeButtonMenu {
+  width: 100px;
+  height: 200px;
+  background-color: white;
+  border: 2px solid black;
 }

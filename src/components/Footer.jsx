@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Miniature from "./Miniature";
+import HomeMenu from "./HomeMenu";
 import "../App.css";
 
 const Footer = ({
@@ -15,10 +16,21 @@ const Footer = ({
   setIsVisible,
 
 }) => {
+
+  const [ isHomeMenu, setIsHomeMenu ] = useState(false);
+
+  function openHomeMenu(){
+    console.log("its pressed")
+    setIsHomeMenu(true);
+  }
   return (
     <>
       <div className="footer">
-        <div className="home">Home</div>
+        { isHomeMenu ? (
+          <HomeMenu />
+        ): (
+        <button onClick={openHomeMenu} className="home">Home</button>
+        )}
         {activeWindows.map((window, index) => (
           <Miniature
             key={window.id}

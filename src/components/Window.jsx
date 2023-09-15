@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Draggable from "react-draggable";
 
 const Window = ({
@@ -11,6 +11,8 @@ const Window = ({
   setMaxZIndex,
 
 }) => {
+  const [isMaximized, setIsMaximized] = useState(false);
+  const [position, setPosition] = useState({top: 120 + (16 * index) , left:120 + (16 * index) })  
 
   function closeWindow() {
     const clickedWindowstoClose = [...activeWindows];
@@ -34,16 +36,29 @@ const Window = ({
     setMaxZIndex(newZIndex);
   }
 
+  function maximizeWindow(){
+    setIsMaximized(true); 
+
+    if (isMaximized) {
+      setIsMaximized(false)
+    }
+  }
+
+  function handleDrag(e, drag) {
+    console.log("drag", drag)
+    setPosition({
+      top: position.top + drag.deltaY,
+      left: position.left + drag.deltaX
+    })
+
+  }
 
   if (activeWindows[index].isVisible)
     return (
       <Draggable
-        defaultPosition={{
-          x: ((30 + 5 * index) * window.innerWidth) / 100,
-          y: ((8 + 5 * index) * window.innerHeight) / 100,
-        }}
+        position={position} 
+        onDrag={handleDrag}
         onStart={handleWindowClick}
-
         handle=".handle"
       >
         <div
@@ -52,6 +67,10 @@ const Window = ({
             zIndex: page.zIndex,
             visibility: page.isVisible ? "visible" : "hidden",
             maxHeigth: page.innerHeight,
+            width: isMaximized ? "100vw" : "400px",
+            height:  isMaximized ? "100vh" : "600px",
+            top: isMaximized ? "0" : position.top,
+            left: isMaximized ? "0" : position.left,
           }}
           onClick={handleWindowClick}
         >
@@ -61,6 +80,7 @@ const Window = ({
           This is the {page.name} window {index} and the zindex is {page.zIndex}
           <button onClick={closeWindow}>x</button>
           <button onClick={minimizeWindow}>-</button>
+          <button onClick={maximizeWindow}>[ . ]</button>
         </div>
       </Draggable>
     );
