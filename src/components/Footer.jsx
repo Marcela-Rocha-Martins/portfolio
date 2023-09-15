@@ -14,42 +14,42 @@ const Footer = ({
   setMinimized,
   isVisible,
   setIsVisible,
-
 }) => {
+  const [isHomeMenu, setIsHomeMenu] = useState(false);
 
-  const [ isHomeMenu, setIsHomeMenu ] = useState(false);
-
-  function openHomeMenu(){
-    console.log("its pressed")
-    setIsHomeMenu(true);
+  function openHomeMenu() {
+    setIsHomeMenu(!isHomeMenu); 
   }
+
   return (
-    <>
-      <div className="footer">
-        { isHomeMenu ? (
-          <HomeMenu />
-        ): (
-        <button onClick={openHomeMenu} className="home">Home</button>
-        )}
-        {activeWindows.map((window, index) => (
-          <Miniature
-            key={window.id}
-            page={window}
-            setActiveWindows={setActiveWindows}
-            activeWindows={activeWindows}
-            index={index}
-            zIndex={zIndex}
-            setZIndex={setZIndex}
-            maxZIndex={maxZIndex}
-            setMaxZIndex={setMaxZIndex}
-            minimized={minimized}
-            setMinimized={setMinimized}
-            isVisible={isVisible}
-            setIsVisible={setIsVisible}
-          />
-        ))}
+    <div className="footer">
+      <div className="homeMenuWrapper">
+       isHomeMenu ?
+        <HomeMenu /> 
+      <button onClick={openHomeMenu} className="homeButton">
+        Home
+      </button>
       </div>
-    </>
+      {activeWindows.map((window, index) => (
+        <Miniature
+          key={window.id}
+          page={window}
+          setActiveWindows={setActiveWindows}
+          activeWindows={activeWindows}
+          index={index}
+          zIndex={zIndex}
+          setZIndex={setZIndex}
+          maxZIndex={maxZIndex}
+          setMaxZIndex={setMaxZIndex}
+          minimized={minimized}
+          setMinimized={setMinimized}
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
+        />
+      ))}
+    </div>
   );
 };
+
+
 export default Footer;
