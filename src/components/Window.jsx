@@ -2,13 +2,16 @@ import React from "react";
 import Draggable from "react-draggable";
 
 const Window = ({
+
   page,
   index,
   activeWindows,
   setActiveWindows,
   maxZIndex,
   setMaxZIndex,
+
 }) => {
+
   function closeWindow() {
     const clickedWindowstoClose = [...activeWindows];
     let index = clickedWindowstoClose.indexOf(page);
@@ -29,17 +32,18 @@ const Window = ({
     let newZIndex = maxZIndex + 1;
     clickedWindows[index].zIndex = newZIndex;
     setMaxZIndex(newZIndex);
-
-    console.log("handleWindowClick");
   }
+
 
   if (activeWindows[index].isVisible)
     return (
       <Draggable
         defaultPosition={{
-          x: ((50 + 5 * index) * window.innerWidth) / 100,
-          y: ((50 + 5 * index) * window.innerHeight) / 100,
+          x: ((30 + 5 * index) * window.innerWidth) / 100,
+          y: ((8 + 5 * index) * window.innerHeight) / 100,
         }}
+        onStart={handleWindowClick}
+
         handle=".handle"
       >
         <div
@@ -47,6 +51,7 @@ const Window = ({
           style={{
             zIndex: page.zIndex,
             visibility: page.isVisible ? "visible" : "hidden",
+            maxHeigth: page.innerHeight,
           }}
           onClick={handleWindowClick}
         >
