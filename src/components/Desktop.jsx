@@ -11,6 +11,15 @@ const Desktop = () => {
   const [minimized, setMinimized] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
+  const shortcutList = [
+    { name: "My Computer", id: "my-computer" },
+    { name: "Contact", id: "contact" },
+    { name: "Projects", id: "projects" },
+    { name: "Who", id: "who" },
+    { name: "Experiences", id: "experiences" },
+    { name: "Education", id: "education" },
+    { name: "Bin", id: "bin" },
+  ];
 
   return (
     <>
@@ -24,6 +33,7 @@ const Desktop = () => {
         minimized={minimized}
         isVisible={isVisible}
         setIsVisible={setIsVisible}
+        shortcutList={shortcutList}
       />
       <Windows
         activeWindows={activeWindows}
@@ -36,6 +46,7 @@ const Desktop = () => {
         setIsVisible={setIsVisible}
         maxZIndex={maxZIndex}
         setMaxZIndex={setMaxZIndex}
+        shortcutList={shortcutList}
       />
       <Footer
         activeWindows={activeWindows}
@@ -48,6 +59,7 @@ const Desktop = () => {
         setMinimized={setMinimized}
         isVisible={isVisible}
         setIsVisible={setIsVisible}
+        shortcutList={shortcutList}
       />
     </>
   );

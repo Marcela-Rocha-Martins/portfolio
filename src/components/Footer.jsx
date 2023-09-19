@@ -15,49 +15,63 @@ const Footer = ({
   setMinimized,
   isVisible,
   setIsVisible,
+  shortcutList,
 }) => {
   const [isHomeMenu, setIsHomeMenu] = useState(false);
 
   function openHomeMenu() {
-    setIsHomeMenu(!isHomeMenu); 
+    setIsHomeMenu(!isHomeMenu);
   }
 
   return (
     <div className="footer">
       <div className="homeMenuWrapper">
-      {isHomeMenu && <HomeMenu />}
-      <div className="homeButtonContainer">
-      <button onClick={openHomeMenu} className="homeButton">
-        Home
-      </button>
-      </div>
+        {isHomeMenu && (
+          <HomeMenu
+            shortcutList={shortcutList}
+            page={window}
+            setActiveWindows={setActiveWindows}
+            activeWindows={activeWindows}
+            zIndex={zIndex}
+            setZIndex={setZIndex}
+            maxZIndex={maxZIndex}
+            setMaxZIndex={setMaxZIndex}
+            minimized={minimized}
+            setMinimized={setMinimized}
+            isVisible={isVisible}
+            setIsVisible={setIsVisible}
+          />
+        )}
+        <div className="homeButtonContainer">
+          <button onClick={openHomeMenu} className="homeButton">
+            Home
+          </button>
+        </div>
       </div>
       <div className="activeWindows">
-      {activeWindows.map((window, index) => (
-        <Miniature
-          key={window.id}
-          page={window}
-          setActiveWindows={setActiveWindows}
-          activeWindows={activeWindows}
-          index={index}
-          zIndex={zIndex}
-          setZIndex={setZIndex}
-          maxZIndex={maxZIndex}
-          setMaxZIndex={setMaxZIndex}
-          minimized={minimized}
-          setMinimized={setMinimized}
-          isVisible={isVisible}
-          setIsVisible={setIsVisible}
-        />
-       
-      ))}
-       </div>
-       <div className="realTime">
+        {activeWindows.map((window, index) => (
+          <Miniature
+            key={window.id}
+            page={window}
+            setActiveWindows={setActiveWindows}
+            activeWindows={activeWindows}
+            index={index}
+            zIndex={zIndex}
+            setZIndex={setZIndex}
+            maxZIndex={maxZIndex}
+            setMaxZIndex={setMaxZIndex}
+            minimized={minimized}
+            setMinimized={setMinimized}
+            isVisible={isVisible}
+            setIsVisible={setIsVisible}
+          />
+        ))}
+      </div>
+      <div className="realTime">
         <Clock />
-       </div>
+      </div>
     </div>
   );
 };
-
 
 export default Footer;

@@ -1,26 +1,38 @@
 import React from "react";
+import HomeMenuItem from "./HomeMenuItem";
 
-const HomeMenu = () => {
-
-    const foldersList = [
-        { name: "My Computer", id: "my-computer" },
-        { name: "Contact", id: "contact" },
-        { name: "Projects", id: "projects" },
-        { name: "Who", id: "who" },
-        { name: "Experiences", id: "experiences" },
-        { name: "Education", id: "education" },
-        { name: "Bin", id: "bin" },
-      ];
-
-    return (
-        <div className="homeButtonMenu">
-         <ul>
-        {foldersList.map((shortcut) => (
-          <li style={{ listStyleType: "none" }} key={shortcut.id}>{shortcut.name}</li>
-        ))}
-      </ul>
-        </div>
-    )
-}
+const HomeMenu = ({
+  activeWindows,
+  setActiveWindows,
+  zIndex,
+  setZIndex,
+  maxZIndex,
+  setMaxZIndex,
+  minimized,
+  setMinimized,
+  isVisible,
+  setIsVisible,
+  shortcutList,
+}) => {
+  return (
+    <div className="homeButtonMenu">
+      {shortcutList.map((window) => (
+        <HomeMenuItem
+          page={window}
+          setActiveWindows={setActiveWindows}
+          activeWindows={activeWindows}
+          zIndex={zIndex}
+          setZIndex={setZIndex}
+          maxZIndex={maxZIndex}
+          setMaxZIndex={setMaxZIndex}
+          minimized={minimized}
+          setMinimized={setMinimized}
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
+        />
+      ))}
+    </div>
+  );
+};
 
 export default HomeMenu;
