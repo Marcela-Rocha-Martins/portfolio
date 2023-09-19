@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Miniature from "./Miniature";
 import HomeMenu from "./HomeMenu";
+import Clock from "./Clock";
 import "../App.css";
 
 const Footer = ({
@@ -24,12 +25,14 @@ const Footer = ({
   return (
     <div className="footer">
       <div className="homeMenuWrapper">
-       isHomeMenu ?
-        <HomeMenu /> 
+      {isHomeMenu && <HomeMenu />}
+      <div className="homeButtonContainer">
       <button onClick={openHomeMenu} className="homeButton">
         Home
       </button>
       </div>
+      </div>
+      <div className="activeWindows">
       {activeWindows.map((window, index) => (
         <Miniature
           key={window.id}
@@ -46,7 +49,12 @@ const Footer = ({
           isVisible={isVisible}
           setIsVisible={setIsVisible}
         />
+       
       ))}
+       </div>
+       <div className="realTime">
+        <Clock />
+       </div>
     </div>
   );
 };
