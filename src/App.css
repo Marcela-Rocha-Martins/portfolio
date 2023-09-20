@@ -99,3 +99,47 @@
   right: 2%;
   text-align: center;
 }
+/* Project Style ------------------------------------ */
+
+.project-container {
+  display: flex;
+}
+
+.project-list {
+  flex: 1;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.project-list h2 {
+  margin-top: 0;
+}
+
+.project-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-list li {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.project-list li.active {
+  background-color: #eee;
+}
+
+.project-details {
+  flex: 2;
+  padding: 10px;
+}
+
+.project-details h2 {
+  margin-top: 0;
+}
+
+.project-details h3 {
+  margin-top: 0;
+}
+
+/* Add more styles as needed */
