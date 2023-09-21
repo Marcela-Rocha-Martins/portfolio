@@ -30,6 +30,7 @@ const Shortcurts = ({
           setMinimized={setMinimized}
           isVisible={isVisible}
           setIsVisible={setIsVisible}
+          shortcutList={shortcutList}
         />
 
       ))}

@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import Draggable from "react-draggable";
-
 import Contact from "./pages/Contact";
-import Education from "./pages/Education";
-import Experience from "./pages/Experience";
+import Achievements from "./pages/Achievements";
+import Experiences from "./pages/Experiences";
 import Projects from "./pages/Projects";
 import Who from "./pages/Who";
-import MyComputer from "./pages/MyComputer";
 
 const Window = ({
   page,
@@ -68,23 +66,19 @@ const Window = ({
         pageComponent = <Contact />;
         break;
 
-      case "My Computer":
-        pageComponent = <MyComputer />;
+      case "Achievements":
+        pageComponent = <Achievements />;
         break;
 
-      case "Education":
-        pageComponent = <Education />;
+      case "Experiences":
+        pageComponent = <Experiences />;
         break;
 
-      case "Experience":
-        pageComponent = <Experience />;
-        break;
-
-      case "Who":
+      case "Who am I":
         pageComponent = <Who />;
         break;
 
-      case "Projects":
+      case "My Projects":
         pageComponent = <Projects />;
     }
 

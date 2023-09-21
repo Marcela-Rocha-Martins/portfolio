@@ -12,13 +12,11 @@ const Desktop = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   const shortcutList = [
-    { name: "My Computer", id: "my-computer" },
-    { name: "Contact", id: "contact" },
-    { name: "Projects", id: "projects" },
-    { name: "Who", id: "who" },
+    { name: "My Projects", id: "projects" },
+    { name: "Who am I", id: "who" },
     { name: "Experiences", id: "experiences" },
-    { name: "Education", id: "education" },
-    { name: "Bin", id: "bin" },
+    { name: "Achievements", id: "achievements" },
+    { name: "Contact", id: "contact" },
   ];
 
   return (
