@@ -10,9 +10,11 @@ const Desktop = () => {
   const [maxZIndex, setMaxZIndex] = useState(0);
   const [minimized, setMinimized] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const [frontPage, setFrontPage] = useState(false);
+
 
   const shortcutList = [
-    { name: "My Projects", id: "projects" },
+    { name: "Projects", id: "projects" },
     { name: "Who am I", id: "who" },
     { name: "Experiences", id: "experiences" },
     { name: "Achievements", id: "achievements" },
@@ -32,6 +34,8 @@ const Desktop = () => {
         isVisible={isVisible}
         setIsVisible={setIsVisible}
         shortcutList={shortcutList}
+        frontPage={frontPage}
+        setFrontPage={setFrontPage}
       />
       <Windows
         activeWindows={activeWindows}
@@ -45,6 +49,8 @@ const Desktop = () => {
         maxZIndex={maxZIndex}
         setMaxZIndex={setMaxZIndex}
         shortcutList={shortcutList}
+        frontPage={frontPage}
+        setFrontPage={setFrontPage}
       />
       <Footer
         activeWindows={activeWindows}
@@ -58,6 +64,8 @@ const Desktop = () => {
         isVisible={isVisible}
         setIsVisible={setIsVisible}
         shortcutList={shortcutList}
+        frontPage={frontPage}
+        setFrontPage={setFrontPage}
       />
     </>
   );

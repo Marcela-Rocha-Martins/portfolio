@@ -12,6 +12,8 @@ const Windows = ({
   setIsVisible,
   maxZIndex,
   setMaxZIndex,
+  frontPage,
+  setFrontPage,
 }) => {
   return (
     <>
@@ -30,6 +32,8 @@ const Windows = ({
           setIsVisible={setIsVisible}
           maxZIndex={maxZIndex}
           setMaxZIndex={setMaxZIndex}
+          frontPage={frontPage}
+          setFrontPage={setFrontPage}
         />
       ))}
     </>

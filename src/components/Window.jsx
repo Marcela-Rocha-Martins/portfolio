@@ -9,6 +9,7 @@ import Who from "./pages/Who";
 const Window = ({
   page,
   index,
+  zIndex,
   activeWindows,
   setActiveWindows,
   maxZIndex,
@@ -44,10 +45,14 @@ const Window = ({
 
   function maximizeWindow() {
     setIsMaximized(true);
-
     if (isMaximized) {
       setIsMaximized(false);
     }
+    // const maximizedWindow = [...activeWindows];
+    // let index = maximizedWindow.indexOf(page);
+    // let newZIndex = maxZIndex + 1;
+    // maximizedWindow[index].zIndex = newZIndex;
+    // setMaxZIndex(newZIndex);
   }
 
   function handleDrag(e, drag) {
@@ -63,23 +68,23 @@ const Window = ({
   if (activeWindows[index].isVisible)
     switch (page.name) {
       case "Contact":
-        pageComponent = <Contact />;
+        pageComponent = <Contact index={index} zIndex={zIndex} page={page}/>;
         break;
 
       case "Achievements":
-        pageComponent = <Achievements />;
+        pageComponent = <Achievements index={index} zIndex={zIndex} page={page} />;
         break;
 
       case "Experiences":
-        pageComponent = <Experiences />;
+        pageComponent = <Experiences index={index} zIndex={zIndex} page={page}/>;
         break;
 
       case "Who am I":
-        pageComponent = <Who />;
+        pageComponent = <Who index={index} zIndex={zIndex} page={page}/>;
         break;
 
-      case "My Projects":
-        pageComponent = <Projects />;
+      case "Projects":
+        pageComponent = <Projects index={index} zIndex={zIndex} page={page}/>;
     }
 
   return (
@@ -102,11 +107,10 @@ const Window = ({
         }}
         onClick={handleWindowClick}
       >
-       
         <div className="handle" style={{ backgroundColor: "red" }}>
-       <button onClick={closeWindow}>x</button>
-        <button onClick={minimizeWindow}>-</button>
-        <button onClick={maximizeWindow}>[ . ]</button>
+          <button onClick={closeWindow}>x</button>
+          <button onClick={minimizeWindow}>-</button>
+          <button onClick={maximizeWindow}>[ . ]</button>
         </div>
 
         {pageComponent && (
@@ -117,14 +121,12 @@ const Window = ({
               // maxHeight: "90%", // Define a altura máxima conforme necessário
               overflow: "auto",
               top: "0",
-              border: "1px solid red",// Adicione uma barra de rolagem se o conteúdo for muito longo
+              border: "1px solid red", // Adicione uma barra de rolagem se o conteúdo for muito longo
             }}
           >
             {pageComponent}
           </div>
         )}
-
-  
       </div>
     </Draggable>
   );

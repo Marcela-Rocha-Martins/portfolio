@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Projects() {
+function Projects({zIndex, page}) {
     const [selectedProject, setSelectedProject] = useState(null);
 
     const projects = [
@@ -29,7 +29,7 @@ function Projects() {
 
     return (
         <div>
-          <h1>Projects Component</h1>
+          <h1>Projects Component - with my {page.zIndex} index</h1>
           <div className="project-container">
             <div className="project-list">
               <h2>Project List</h2>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Miniature from "./Miniature";
 import HomeMenu from "./HomeMenu";
 import Clock from "./Clock";
+import clockIcon from "../images/clock-icon.svg";
 import "../App.css";
 
 const Footer = ({
@@ -16,6 +17,8 @@ const Footer = ({
   isVisible,
   setIsVisible,
   shortcutList,
+  frontPage,
+  setFrontPage,
 }) => {
   const [isHomeMenu, setIsHomeMenu] = useState(false);
 
@@ -25,30 +28,29 @@ const Footer = ({
 
   return (
     <div className="footer">
-      <div className="homeMenuWrapper">
-        {isHomeMenu && (
-          <HomeMenu
-            shortcutList={shortcutList}
-            page={window}
-            setActiveWindows={setActiveWindows}
-            activeWindows={activeWindows}
-            zIndex={zIndex}
-            setZIndex={setZIndex}
-            maxZIndex={maxZIndex}
-            setMaxZIndex={setMaxZIndex}
-            minimized={minimized}
-            setMinimized={setMinimized}
-            isVisible={isVisible}
-            setIsVisible={setIsVisible}
-          />
-        )}
-        <div className="homeButtonContainer">
-          <button onClick={openHomeMenu} className="homeButton">
-            Home
-          </button>
-        </div>
-      </div>
-      <div className="activeWindows">
+      {isHomeMenu && (
+        <HomeMenu
+          shortcutList={shortcutList}
+          page={window}
+          setActiveWindows={setActiveWindows}
+          activeWindows={activeWindows}
+          zIndex={zIndex}
+          setZIndex={setZIndex}
+          maxZIndex={maxZIndex}
+          setMaxZIndex={setMaxZIndex}
+          minimized={minimized}
+          setMinimized={setMinimized}
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
+          frontPage={frontPage}
+          setFrontPage={setFrontPage}
+        />
+      )}
+      <button onClick={openHomeMenu} className="homeButton">
+        Start
+      </button>
+
+      <div className="activeWindowsWrapper">
         {activeWindows.map((window, index) => (
           <Miniature
             key={window.id}
@@ -64,10 +66,18 @@ const Footer = ({
             setMinimized={setMinimized}
             isVisible={isVisible}
             setIsVisible={setIsVisible}
+            frontPage={frontPage}
+          setFrontPage={setFrontPage}
           />
         ))}
       </div>
-      <div className="realTime">
+      <div className="clockWrapper">
+        <div
+          className="clockIcon"
+          style={{
+            backgroundImage: `url(${clockIcon})`,
+          }}
+        ></div>
         <Clock />
       </div>
     </div>

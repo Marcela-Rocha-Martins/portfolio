@@ -3,29 +3,42 @@
   flex-direction: column;
   height: 100%;
   width: 100vw;
-  border: 5px solid rgb(246, 193, 20);
   overflow: hidden;
 }
 
 .footer {
-  background-color: #D9D9D9;/* figma */
-  border: 2px solid #434343; /* figma */
+  background-color: #d9d9d9;
+  border: 2px solid #434343;
+  border-bottom: none;
   display: flex;
-  width: 98vw; /* figma */
+  width: 98vw;
   align-self: center;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-radius: 66px 66px 0px 0px; /* figma */
-  height: 100px; /* figma */
-  flex-shrink: 0; /* figma */
+  padding: 4px 32px;
+  border-radius: 66px 66px 0px 0px;
+  height: 104px;
+  flex-shrink: 0;
+  position: relative;
+  align-items: center;
 }
 
-.miniatures {
-  background-color: white;
-  width: 120px;
+.clockWrapper {
+  width: auto;
+  height: auto;
+  display: flex;
+  /* position: absolute; */
+}
+
+.clockDateTime {
+  align-self: center;
   margin-left: 8px;
-  font-size: 15px;
-  text-align: center;
+  margin-right: 8px;
+}
+
+.clockIcon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin-left: 8px;
 }
 
 .wrapper {
@@ -37,10 +50,10 @@
   column-gap: 100px;
   grid-auto-flow: column;
   border: none;
-  margin-top: 64px;
-  margin-left: 64px;
+  margin-top: 45px;
+  margin-left: 45px;
   width: 92%;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 }
 
 .folders-container {
@@ -82,29 +95,68 @@
   height: auto;
 }
 
-.homeMenuWrapper {
+/* .homeMenuWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 200px;
   height: 300px;
   position: absolute;
+  background-color: red;
   bottom: 0;
-}
+} */
 
 .homeButtonMenu {
-  width: 200px;
-  height: 300px;
-  background-color: white;
-  border: 2px solid black;
+  /* width: auto;
+  height: auto; */
+  position: absolute;
+  bottom: 112px;
+  left: 32px; 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 16px;
+  border: 2px solid #434343;
+  background: #d9d9d9;
+  box-shadow: 8px 8px 0px 0px rgba(67, 67, 67, 0.3);
+  padding: 16px;
+}
+
+.homeMenuItem {
+  display: flex;
+  cursor: pointer;
+  gap: 8px;
+  border: none;
+  align-items: center;
+  background-color: transparent;
+}
+
+.pageName {
+  color: #434343;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .homeButton {
-  width: 100px;
-  height: 30px;
-  background-color: lightblue;
-  border: none;
-  margin-bottom: 40;
+  width: 126px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 64px;
+  border: 2px solid #434343;
+  background: #c98181;
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.4) inset,
+    -6px -6px 0px 0px rgba(0, 0, 0, 0.15) inset;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  /* margin-bottom: 40; */
 }
 
 .homeButtonContainer {
@@ -113,19 +165,49 @@
   padding-bottom: 4px;
 }
 
-.activeWindows {
-  margin-left: 10%;
+.activeWindowsWrapper {
+  flex: auto;
+  display: flex;
+  justify-content: flex-start;
+  row-gap: 3px;
+  margin-left: 10px;
 }
 
-.clock {
-  width: 90px;
-  height: 20px;
+.miniatures {
   background-color: white;
-  position: absolute;
-  top: 97%;
-  right: 2%;
-  text-align: center;
+  width: 150px;
+  height: 48px;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 16px;
+  border: 2px solid #434343;
+  background: #e3e3e3;
+  box-shadow: 4px 4px 0px 0px #fff inset,
+    -6px -6px 0px 0px rgba(0, 0, 0, 0.25) inset;
+  cursor: pointer;
+  margin-left: 6px;
 }
+
+.miniaturesActivated {
+  width: 150px;
+  height: 48px;
+  border-radius: 16px;
+  border: 2px solid #434343;
+  background: #c8c8c8;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.25) inset;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
 /* Project Style ------------------------------------ */
 
 .project-container {

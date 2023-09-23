@@ -11,7 +11,6 @@ const Shortcut = ({
   setActiveWindows,
   maxZIndex,
   setMaxZIndex,
-  shortcutList,
 }) => {
   function openWindow() {
     const clickedWindows = [...activeWindows];
@@ -54,7 +53,7 @@ const Shortcut = ({
         page.name === "Achievements" ? achievementsIcon :
         page.name === "Experiences" ? experiencesIcon :
         page.name === "Who am I" ? whoIcon :
-        page.name === "My Projects" ? projectsIcon : ""})` }}
+        page.name === "Projects" ? projectsIcon : ""})` }}
       ></div>
       <p className="page-name">{page.name}</p>
     </button>
