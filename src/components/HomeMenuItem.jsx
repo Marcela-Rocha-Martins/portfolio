@@ -45,8 +45,7 @@ const HomeMenuItem = ({
   }
 
   return (
-    <button onClick={openWindow} className="homeMenuItem">
-      <div className="topStyle"></div>
+    <button onClick={openWindow} className="homeMenuItems">
       <div
         className="folderMenu"
         style={{

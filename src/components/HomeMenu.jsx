@@ -15,7 +15,9 @@ const HomeMenu = ({
   shortcutList,
 }) => {
   return (
-    <div className="homeButtonMenu">
+    <div className="homeMenu">
+      <div className="topStyle"></div>
+      <div className="homeMenuWrapper">
       {shortcutList.map((window) => (
         <HomeMenuItem
           page={window}
@@ -31,6 +33,7 @@ const HomeMenu = ({
           setIsVisible={setIsVisible}
         />
       ))}
+      </div>
     </div>
   );
 };
