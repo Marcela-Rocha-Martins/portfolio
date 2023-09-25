@@ -14,6 +14,7 @@ const Windows = ({
   setMaxZIndex,
   frontPage,
   setFrontPage,
+  projects,
 }) => {
   return (
     <>
@@ -34,6 +35,7 @@ const Windows = ({
           setMaxZIndex={setMaxZIndex}
           frontPage={frontPage}
           setFrontPage={setFrontPage}
+          projects={projects}
         />
       ))}
     </>

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import contactIcon from "../images/contact-icon.svg";
 import achievementsIcon from "../images/achievements-icon.svg";
 import experiencesIcon from "../images/experiences-icon.svg";
 import whoIcon from "../images/who-icon.svg";
 import projectsIcon from "../images/projects-icon.svg";
+import arrowIcon from "../images/arrow.svg";
+import MenuProjects from "./MenuProjects";
+import { normalizeUnits } from "moment-timezone";
 
 const HomeMenuItem = ({
   page,
@@ -11,7 +14,10 @@ const HomeMenuItem = ({
   setActiveWindows,
   maxZIndex,
   setMaxZIndex,
+  projects,
 }) => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
   function openWindow() {
     const clickedWindows = [...activeWindows];
 
@@ -44,32 +50,62 @@ const HomeMenuItem = ({
     setActiveWindows(clickedWindows);
   }
 
+  function openProjectsMenu() {
+    if (!isMenuOpen) {
+      console.log("setMenuOpen", isMenuOpen);
+      setMenuOpen(true);
+    } else {
+      setMenuOpen(false);
+    }
+  }
+
   return (
-    <button onClick={openWindow} className="homeMenuItems">
-      <div
-        className="folderMenu"
-        style={{
-          backgroundImage: `url(${
-            page.name === "Contact"
-              ? contactIcon
-              : page.name === "Achievements"
-              ? achievementsIcon
-              : page.name === "Experiences"
-              ? experiencesIcon
-              : page.name === "Who am I"
-              ? whoIcon
-              : page.name === "Projects"
-              ? projectsIcon
-              : ""
-          })`,
-          backgroundSize: "cover",
-          width: "24px",
-          height: "24px",
-          flexShrink: "0",
-        }}
-      ></div>
-      <div className="pageName">{page.name} </div>
-    </button>
+    <>
+      <div className="homeMenuItems">
+        <button
+          onClick={openWindow}
+          className="folderMenu"
+          style={{
+            backgroundImage: `url(${
+              page.name === "Contact"
+                ? contactIcon
+                : page.name === "Achievements"
+                ? achievementsIcon
+                : page.name === "Experiences"
+                ? experiencesIcon
+                : page.name === "Who am I"
+                ? whoIcon
+                : page.name === "Projects"
+                ? projectsIcon
+                : ""
+            })`,
+            backgroundSize: "cover",
+            border: "none",
+            backgroundColor: "transparent",
+            width: "24px",
+            height: "24px",
+            flexShrink: "0",
+            cursor: "pointer",
+          }}
+        ></button>
+
+        <button onClick={openWindow} className="pageName">
+          {page.name}{" "}
+        </button>
+
+        {page.name === "Projects" ? (
+          <button
+            className="arrow"
+            onClick={openProjectsMenu}
+            style={{
+              backgroundImage: `url(${arrowIcon})`,
+            }}
+          ></button>
+        ) : null}
+      </div>
+
+      {isMenuOpen && <MenuProjects projects={projects} page={page} />}
+    </>
   );
 };
 

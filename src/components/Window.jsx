@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+
 import Draggable from "react-draggable";
 import Contact from "./pages/Contact";
 import Achievements from "./pages/Achievements";
 import Experiences from "./pages/Experiences";
 import Projects from "./pages/Projects";
 import Who from "./pages/Who";
+import closeButton from "../images/closeButton.svg";
+import minimizedButton from "../images/minimizedButton.svg";
+import maximizedButton from "../images/maximizedButton.svg";
 
 const Window = ({
   page,
@@ -14,12 +18,14 @@ const Window = ({
   setActiveWindows,
   maxZIndex,
   setMaxZIndex,
+  projects,
 }) => {
   const [isMaximized, setIsMaximized] = useState(false);
   const [position, setPosition] = useState({
     top: 120 + 16 * index,
     left: 120 + 16 * index,
   });
+  const [isDragging, setIsDragging] = useState(false);
 
   function closeWindow() {
     const clickedWindowstoClose = [...activeWindows];
@@ -48,11 +54,6 @@ const Window = ({
     if (isMaximized) {
       setIsMaximized(false);
     }
-    // const maximizedWindow = [...activeWindows];
-    // let index = maximizedWindow.indexOf(page);
-    // let newZIndex = maxZIndex + 1;
-    // maximizedWindow[index].zIndex = newZIndex;
-    // setMaxZIndex(newZIndex);
   }
 
   function handleDrag(e, drag) {
@@ -68,23 +69,34 @@ const Window = ({
   if (activeWindows[index].isVisible)
     switch (page.name) {
       case "Contact":
-        pageComponent = <Contact index={index} zIndex={zIndex} page={page}/>;
+        pageComponent = <Contact index={index} zIndex={zIndex} page={page} />;
         break;
 
       case "Achievements":
-        pageComponent = <Achievements index={index} zIndex={zIndex} page={page} />;
+        pageComponent = (
+          <Achievements index={index} zIndex={zIndex} page={page} />
+        );
         break;
 
       case "Experiences":
-        pageComponent = <Experiences index={index} zIndex={zIndex} page={page}/>;
+        pageComponent = (
+          <Experiences index={index} zIndex={zIndex} page={page} />
+        );
         break;
 
       case "Who am I":
-        pageComponent = <Who index={index} zIndex={zIndex} page={page}/>;
+        pageComponent = <Who index={index} zIndex={zIndex} page={page} />;
         break;
 
       case "Projects":
-        pageComponent = <Projects index={index} zIndex={zIndex} page={page}/>;
+        pageComponent = (
+          <Projects
+            index={index}
+            zIndex={zIndex}
+            page={page}
+            projects={projects}
+          />
+        );
     }
 
   return (
@@ -100,28 +112,82 @@ const Window = ({
           zIndex: page.zIndex,
           visibility: page.isVisible ? "visible" : "hidden",
           maxHeigth: page.innerHeight,
-          width: isMaximized ? "100vw" : "400px",
-          height: isMaximized ? "100vh" : "600px",
+          width: isMaximized ? "100vw" : "50vw",
+          height: isMaximized ? "100vh" : "70vh",
           top: isMaximized ? "0" : position.top,
           left: isMaximized ? "0" : position.left,
         }}
         onClick={handleWindowClick}
       >
-        <div className="handle" style={{ backgroundColor: "red" }}>
-          <button onClick={closeWindow}>x</button>
-          <button onClick={minimizeWindow}>-</button>
-          <button onClick={maximizeWindow}>[ . ]</button>
+        <div
+          className="handle"
+          onMouseDown={() => setIsDragging(true)}
+          onMouseUp={() => setIsDragging(false)}
+          style={{ cursor: isDragging ? "grabbing" : "grab" }}
+        >
+          <div
+            className="allButtons"
+            style={{
+              display: "flex",
+              gap: "10px",
+            }}
+          >
+            <button
+              onClick={closeWindow}
+              style={{
+                backgroundImage: `url(${closeButton})`,
+                width: "24px",
+                height: "24px",
+                backgroundSize: "cover",
+                backgroundColor: "transparent",
+                border: "none",
+                cursor: "pointer",
+              }}
+            ></button>
+            <button
+              onClick={minimizeWindow}
+              style={{
+                backgroundImage: `url(${minimizedButton})`,
+                backgroundSize: "cover",
+                backgroundColor: "transparent",
+                width: "24px",
+                height: "24px",
+                border: "none",
+                cursor: "pointer",
+              }}
+            ></button>
+            <button
+              onClick={maximizeWindow}
+              style={{
+                backgroundImage: `url(${maximizedButton})`,
+                backgroundSize: "cover",
+                backgroundColor: "transparent",
+                width: "24px",
+                height: "24px",
+                border: "none",
+                cursor: "pointer",
+              }}
+            ></button>
+          </div>
+            <div className="pageNameHandle"
+            style={{
+              color: "#FFF",
+              textAlign: "center", //nao funciona
+              fontSize: "24px",
+              fontStyle: "normal",
+              fontWeight: "600",
+              flex: "auto",
+              marginRight:"92px",
+            }}>{page.name}</div>
         </div>
 
         {pageComponent && (
           <div
             style={{
-              width: "100%",
-              height: "97%",
-              // maxHeight: "90%", // Define a altura máxima conforme necessário
+              // width: "100%",
+              // height: "97%",
               overflow: "auto",
-              top: "0",
-              border: "1px solid red", // Adicione uma barra de rolagem se o conteúdo for muito longo
+              // top: "0",
             }}
           >
             {pageComponent}

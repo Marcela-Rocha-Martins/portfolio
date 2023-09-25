@@ -13,6 +13,8 @@ const HomeMenu = ({
   isVisible,
   setIsVisible,
   shortcutList,
+  projects,
+  page,
 }) => {
   return (
     <div className="homeMenu">
@@ -31,6 +33,7 @@ const HomeMenu = ({
           setMinimized={setMinimized}
           isVisible={isVisible}
           setIsVisible={setIsVisible}
+          projects={projects}
         />
       ))}
       </div>

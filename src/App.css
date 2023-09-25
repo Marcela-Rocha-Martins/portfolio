@@ -7,7 +7,7 @@
 }
 
 .footer {
-  background-color: #d9d9d9;
+  background-color: #efebdd;
   border: 2px solid #434343;
   border-bottom: none;
   display: flex;
@@ -15,7 +15,7 @@
   align-self: center;
   padding: 4px 32px;
   border-radius: 66px 66px 0px 0px;
-  height: 104px;
+  height: 90px;
   flex-shrink: 0;
   position: relative;
   align-items: center;
@@ -35,10 +35,11 @@
 }
 
 .clockIcon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
   margin-left: 8px;
+  background-size: cover;
 }
 
 .wrapper {
@@ -46,8 +47,8 @@
   display: grid;
   grid-template-rows: repeat(auto-fill, minmax(180px, 150px));
   grid-template-columns: repeat(auto-fill, minmax(50px, 150px));
-  row-gap: 20px;
-  column-gap: 100px;
+  row-gap: 10px;
+  column-gap: 40px;
   grid-auto-flow: column;
   border: none;
   margin-top: 45px;
@@ -62,17 +63,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
   background-color: transparent !important;
   cursor: pointer;
+
 }
 
 .folder {
   display: flex;
-  padding: 10px;
-  width: 96px;
-  height: 96px;
+  width: 85px;
+  height: 85px;
   flex-shrink: 0;
+  background-size: cover;
 }
 
 .page-name {
@@ -80,19 +81,35 @@
   color: #434343;
   text-align: center;
   font-family: Poppins;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 
 .window {
-  background-color: white;
   position: absolute;
-  border: 2px solid black;
-  padding-top: 4px;
+  margin-top: 0;
   padding-bottom: 4px;
   height: auto;
+  border-radius: 16px;
+  border: 2px solid #434343;
+  background: #efebdd;
+  box-shadow: 8px 8px 0px 0px rgba(67, 67, 67, 0.3);
+}
+
+.handle {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  padding: 8px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 16px 16px 0px 0px;
+  border-bottom: 2px solid #434343;
+  background: #c98181;
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.4) inset,
+    -6px -6px 0px 0px rgba(0, 0, 0, 0.15) inset;
 }
 
 /*  ------------------------- menu --------------------------------------------- */
@@ -101,21 +118,20 @@
   /* width: auto;
   height: auto; */
   position: absolute;
-  margin-top: 0; 
+  margin-top: 0;
   bottom: 112px;
-  left: 32px; 
+  left: 32px;
   border-radius: 16px;
   border: 2px solid #434343;
-  background: #d9d9d9;
+  background: #efebdd;
   box-shadow: 8px 8px 0px 0px rgba(67, 67, 67, 0.3);
-
 }
 
 .topStyle {
   height: 14px;
   width: auto;
   border-bottom: 2px solid #434343;
-  background: #C98181;
+  background: #c98181;
   border-radius: 16px 16px 0px 0px;
 }
 
@@ -142,13 +158,62 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
+.arrow {
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menuProjects {
+  position: absolute;
+  margin-left: 85%;
+  margin-top: -65%;
+  display: inline-flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: 16px;
+  border: 2px solid #434343;
+  background: #efebdd;
+  box-shadow: 8px 8px 0px 0px rgba(67, 67, 67, 0.3);
+}
+
+.menuProjectsList {
+  cursor: pointer;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 16px;
+}
+
+.menuProjectsList ul {
+  list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+}
 /*  ------------------------- FIM DO MENU --------------------------------------------- */
 
-
 .homeButton {
-  width: 126px;
+  width: 140px;
   height: 60px;
   flex-shrink: 0;
   border-radius: 64px;
@@ -158,7 +223,7 @@
     -6px -6px 0px 0px rgba(0, 0, 0, 0.15) inset;
   color: #fff;
   font-family: Poppins;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -181,8 +246,7 @@
 }
 
 .miniatures {
-  background-color: white;
-  width: 150px;
+  width: 140px;
   height: 48px;
   color: #434343;
   font-family: Poppins;
@@ -192,7 +256,7 @@
   line-height: normal;
   border-radius: 16px;
   border: 2px solid #434343;
-  background: #e3e3e3;
+  background: #efebdd;
   box-shadow: 4px 4px 0px 0px #fff inset,
     -6px -6px 0px 0px rgba(0, 0, 0, 0.25) inset;
   cursor: pointer;
@@ -204,7 +268,7 @@
   height: 48px;
   border-radius: 16px;
   border: 2px solid #434343;
-  background: #c8c8c8;
+  background: #B5BFBF;
   color: #434343;
   font-family: Poppins;
   font-size: 14px;
@@ -214,6 +278,12 @@
   box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.25) inset;
   cursor: pointer;
   margin-left: 6px;
+}
+
+.miniatures:hover {
+  background: #B5BFBF;
+  color: #434343;
+  box-shadow: 6px 6px 0px 0px rgba(26, 25, 25, 0.25) inset;
 }
 
 /* Project Style ------------------------------------ */

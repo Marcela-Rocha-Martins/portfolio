@@ -19,6 +19,7 @@ const Footer = ({
   shortcutList,
   frontPage,
   setFrontPage,
+  projects,
 }) => {
   const [isHomeMenu, setIsHomeMenu] = useState(false);
 
@@ -43,7 +44,7 @@ const Footer = ({
           isVisible={isVisible}
           setIsVisible={setIsVisible}
           frontPage={frontPage}
-          setFrontPage={setFrontPage}
+          projects={projects}
         />
       )}
       <button onClick={openHomeMenu} className="homeButton">
@@ -67,7 +68,6 @@ const Footer = ({
             isVisible={isVisible}
             setIsVisible={setIsVisible}
             frontPage={frontPage}
-          setFrontPage={setFrontPage}
           />
         ))}
       </div>
