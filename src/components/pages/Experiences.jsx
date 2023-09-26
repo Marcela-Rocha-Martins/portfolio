@@ -70,7 +70,10 @@ function Experience() {
         </div>
 
         <div className="RightColumnExperiencePage">
-          <div className="horizontalMenuExperiencePage"></div>
+          <div className="horizontalMenuExperiencePage">
+          <p>Work</p>
+          <p>Education</p>
+          </div>
           <div className="contentExperiencePage"></div>
         </div>
 

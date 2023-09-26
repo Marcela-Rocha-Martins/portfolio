@@ -201,7 +201,7 @@ const Window = ({
 
         {pageComponent && (
           <div className="contentWrapper" style={{
-            flex: "auto"
+            flex: "auto", overflowY: "scroll"
           }}>
             {pageComponent}
           </div>
