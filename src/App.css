@@ -6,42 +6,6 @@
   overflow: hidden;
 }
 
-.footer {
-  background-color: #efebdd;
-  border: 2px solid #434343;
-  border-bottom: none;
-  display: flex;
-  width: 98vw;
-  align-self: center;
-  padding: 4px 32px;
-  border-radius: 66px 66px 0px 0px;
-  height: 90px;
-  flex-shrink: 0;
-  position: relative;
-  align-items: center;
-}
-
-.clockWrapper {
-  width: auto;
-  height: auto;
-  display: flex;
-  /* position: absolute; */
-}
-
-.clockDateTime {
-  align-self: center;
-  margin-left: 8px;
-  margin-right: 8px;
-}
-
-.clockIcon {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-  margin-left: 8px;
-  background-size: cover;
-}
-
 .wrapper {
   flex: 1;
   display: grid;
@@ -65,7 +29,6 @@
   justify-content: center;
   background-color: transparent !important;
   cursor: pointer;
-
 }
 
 .folder {
@@ -87,9 +50,12 @@
   line-height: normal;
 }
 
+/* ---------------------------------- window ---------------------------------- */
 .window {
   position: absolute;
   margin-top: 0;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 4px;
   height: auto;
   border-radius: 16px;
@@ -100,10 +66,11 @@
 
 .handle {
   display: flex;
-  align-items: center;
-  margin-top: 0;
+  flex-direction: column;
+  height: auto;
+  /* align-items: center; */
+  /* margin-top: 0; */
   padding: 8px;
-  height: 64px;
   flex-shrink: 0;
   border-radius: 16px 16px 0px 0px;
   border-bottom: 2px solid #434343;
@@ -112,7 +79,85 @@
     -6px -6px 0px 0px rgba(0, 0, 0, 0.15) inset;
 }
 
-/*  ------------------------- menu --------------------------------------------- */
+.firstLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.allButtonsFirstLine {
+  display: flex;
+  gap: 4px;
+}
+
+.buttonsHandleWindow {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pageNameHandle {
+  color: #fff;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  flex: auto;
+  margin-right: 92px;
+}
+
+.secondLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.AllbuttonsSecondLine {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  margin-left: 8px;
+}
+
+.buttonsHandleWindowSL {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.fakeLink {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex: auto;
+  align-items: center;
+  justify-content:flex-start;
+  border-radius: 8px;
+  border: 2px solid #434343;
+  padding: 8px;
+  background: #fff;
+  height: 35px;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: text;
+  
+}
+/* ---------------------------------- END window ------------------------------- */
+
+/*  ----------------------------------- MENU ----------------------------------- */
 
 .homeMenu {
   /* width: auto;
@@ -210,7 +255,45 @@
 ul {
   list-style-type: none;
 }
-/*  ------------------------- FIM DO MENU --------------------------------------------- */
+/*  ----------------------------------- FIM DO MENU ----------------------------------- */
+
+/*  ----------------------------------- FOOTER ----------------------------------- */
+
+.footer {
+  background-color: #efebdd;
+  border: 2px solid #434343;
+  border-bottom: none;
+  display: flex;
+  width: 98vw;
+  align-self: center;
+  padding: 4px 32px;
+  border-radius: 66px 66px 0px 0px;
+  height: 90px;
+  flex-shrink: 0;
+  position: relative;
+  align-items: center;
+}
+
+.clockWrapper {
+  width: auto;
+  height: auto;
+  display: flex;
+  /* position: absolute; */
+}
+
+.clockDateTime {
+  align-self: center;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.clockIcon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  margin-left: 8px;
+  background-size: cover;
+}
 
 .homeButton {
   width: 140px;
@@ -268,7 +351,7 @@ ul {
   height: 48px;
   border-radius: 16px;
   border: 2px solid #434343;
-  background: #B5BFBF;
+  background: #b5bfbf;
   color: #434343;
   font-family: Poppins;
   font-size: 14px;
@@ -281,12 +364,15 @@ ul {
 }
 
 .miniatures:hover {
-  background: #B5BFBF;
+  background: #b5bfbf;
   color: #434343;
   box-shadow: 6px 6px 0px 0px rgba(26, 25, 25, 0.25) inset;
 }
 
-/* Project Style ------------------------------------ */
+/*  ----------------------------------- FIM FOOTER ----------------------------------- */
+
+
+/*  ----------------------------------- PROJECTS PAGE STYLE ----------------------------------- */
 
 .project-container {
   display: flex;
@@ -328,3 +414,4 @@ ul {
 .project-details h3 {
   margin-top: 0;
 }
+/*  ----------------------------------- FIM PROJECTS PAGE STYLE ----------------------------------- */

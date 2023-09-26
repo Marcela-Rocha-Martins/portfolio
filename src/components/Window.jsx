@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Draggable from "react-draggable";
 import Contact from "./pages/Contact";
+
 import Achievements from "./pages/Achievements";
 import Experiences from "./pages/Experiences";
 import Projects from "./pages/Projects";
@@ -9,6 +10,11 @@ import Who from "./pages/Who";
 import closeButton from "../images/closeButton.svg";
 import minimizedButton from "../images/minimizedButton.svg";
 import maximizedButton from "../images/maximizedButton.svg";
+
+import homeIcon from "../images/home-Icon.svg";
+import arrowsLeftRightIcon from "../images/arrowsLeftRight-icon.svg";
+import reloadIcon from "../images/reload.svg";
+import arrowRight from "../images/arrowRight-icon.svg";
 
 const Window = ({
   page,
@@ -123,73 +129,80 @@ const Window = ({
           className="handle"
           onMouseDown={() => setIsDragging(true)}
           onMouseUp={() => setIsDragging(false)}
-          style={{ cursor: isDragging ? "grabbing" : "grab" }}
+          style={{
+            cursor: isDragging ? "grabbing" : "grab",
+          }}
         >
-          <div
-            className="allButtons"
-            style={{
-              display: "flex",
-              gap: "10px",
-            }}
-          >
-            <button
-              onClick={closeWindow}
-              style={{
-                backgroundImage: `url(${closeButton})`,
-                width: "24px",
-                height: "24px",
-                backgroundSize: "cover",
-                backgroundColor: "transparent",
-                border: "none",
-                cursor: "pointer",
-              }}
-            ></button>
-            <button
-              onClick={minimizeWindow}
-              style={{
-                backgroundImage: `url(${minimizedButton})`,
-                backgroundSize: "cover",
-                backgroundColor: "transparent",
-                width: "24px",
-                height: "24px",
-                border: "none",
-                cursor: "pointer",
-              }}
-            ></button>
-            <button
-              onClick={maximizeWindow}
-              style={{
-                backgroundImage: `url(${maximizedButton})`,
-                backgroundSize: "cover",
-                backgroundColor: "transparent",
-                width: "24px",
-                height: "24px",
-                border: "none",
-                cursor: "pointer",
-              }}
-            ></button>
+          <div className="firstLine">
+            <div className="allButtonsFirstLine">
+              <button
+                className="buttonsHandleWindow"
+                onClick={closeWindow}
+                style={{
+                  backgroundImage: `url(${closeButton})`,
+                }}
+              ></button>
+              <button
+                className="buttonsHandleWindow"
+                onClick={minimizeWindow}
+                style={{
+                  backgroundImage: `url(${minimizedButton})`,
+                }}
+              ></button>
+              <button
+                className="buttonsHandleWindow"
+                onClick={maximizeWindow}
+                style={{
+                  backgroundImage: `url(${maximizedButton})`,
+                }}
+              ></button>
+            </div>
+
+            <div className="pageNameHandle">{page.name}</div>
           </div>
-            <div className="pageNameHandle"
-            style={{
-              color: "#FFF",
-              textAlign: "center", //nao funciona
-              fontSize: "24px",
-              fontStyle: "normal",
-              fontWeight: "600",
-              flex: "auto",
-              marginRight:"92px",
-            }}>{page.name}</div>
+
+          {page.name === "Experiences" ? (
+            <div className="secondLine">
+              <div className="AllbuttonsSecondLine">
+                <button
+                  className="buttonsHandleWindowSL"
+                  style={{ 
+                    backgroundImage: `url(${homeIcon})`, 
+                  }}
+                ></button>
+                <button
+                  className="buttonsHandleWindowSL"
+                  style={{ 
+                    backgroundImage: `url(${arrowsLeftRightIcon})`,
+                    width:"78px", 
+                  }}
+                ></button>
+                   <button
+                  className="buttonsHandleWindowSL"
+                  style={{ 
+                    backgroundImage: `url(${reloadIcon})`,
+                  }}
+                ></button>
+              </div>
+
+              <div className="fakeLink"
+              style={{
+                  width:"auto",
+              }}> https://www.fakedin.com</div>
+
+              <div className="buttonsHandleWindowSL"
+              style={{
+                backgroundImage: `url(${arrowRight})`,
+                marginRight: "10px",
+              }}></div>
+            </div>
+          ) : null}
         </div>
 
         {pageComponent && (
-          <div
-            style={{
-              // width: "100%",
-              // height: "97%",
-              overflow: "auto",
-              // top: "0",
-            }}
-          >
+          <div className="contentWrapper" style={{
+            flex: "auto"
+          }}>
             {pageComponent}
           </div>
         )}

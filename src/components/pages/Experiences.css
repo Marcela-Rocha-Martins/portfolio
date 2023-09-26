@@ -1,0 +1,133 @@
+.experiencePage {
+  width: 100%;
+  height: 100%;
+}
+
+.topBannerExperiencePg {
+  width: 100%;
+  background: #5c8fc5;
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.1) inset;
+  height: 126px;
+}
+
+.leftColumnExperiencePg {
+  width: 40%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: -8vh;
+  margin-left: 38px;
+}
+
+.profilePhotoExperiencePg {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.name {
+  color: #434343;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.job {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: #434343;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.locationExperiencePg {
+  display: flex;
+  margin: 0px;
+  align-self: center;
+}
+
+.locationIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.locationTxt {
+  margin: 0px;
+  width: auto;
+  color: #434343;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  opacity: 0.6;
+}
+
+hr {
+  width: 80%;
+  align-self: center;
+  margin: 24px;
+  border: 0.5px solid #c1bcbc;
+}
+
+.buttonsExperiencePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.firstLineLinkedIn {
+  display: flex;
+  border-radius: 8px;
+  border: 2px solid #434343;
+  background: #5c8fc5;
+  width: 141px;
+  height: 40px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkedinIcon {
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+}
+
+.linkedinTxt {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.iconsExperiences {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 2px solid #434343;
+  background: rgba(253, 188, 75, 0);
+}
+
+.downloadGitHub {
+  width: 27px;
+  height: 27px;
+  background-size: cover;
+}
