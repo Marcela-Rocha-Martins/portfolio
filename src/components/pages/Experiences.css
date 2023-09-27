@@ -14,14 +14,14 @@
 }
 
 .leftColumnExperiencePg {
-  width: 40%;
   height: 60%;
-  flex: 1 1;
   display: flex;
   flex-direction: column;
   margin-top: 4vh;
-  margin-left: 8px;
+  margin-left: 4%;
+  margin-right: 4%;
   z-index: 1;
+
 }
 
 .profilePhotoExperiencePg {
@@ -153,25 +153,80 @@ hr {
   margin: 8px;
   margin-top: 30px;
   margin-left: 0px;
-  margin-right: 10px;
+  margin-right: 4%;
   flex: 1 1 auto;
+  width: 30%;
 }
 
 .horizontalMenuExperiencePage {
-    display: flex;
-    gap: 40px;
-    color: #FFF;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin-bottom: 0px;
+  display: flex;
+  gap: 30px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 0px;
+  margin-left: 4%;
+  cursor: pointer;
 }
 
 .contentExperiencePage {
   border-radius: 16px;
   border: 2px solid #ebe9e8;
   background: #fff;
-  height: 100vh;
+  height: auto;
+  padding: 4%;
+}
+
+.photo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  border-radius: 8px;
+  border: 2px solid #ebe9e8;
+  background: lightgray 50% / cover no-repeat;
+}
+
+.resume h3 {
+  margin: 0px;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.resume p {
+  margin: 0px;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  margin: 3px;
+}
+
+.allContentWork {
+  display: flex;
+  gap: 12px;
+}
+
+.jobDescription {
+  flex-shrink: 0;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

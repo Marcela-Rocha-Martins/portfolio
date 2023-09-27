@@ -1,0 +1,125 @@
+{
+  "work": [
+    {
+      "title": "Content Leader",
+      "description": "Responsible for strategic accounts and content and social media projects management for brands such as Randstad, Instituto SulAmérica, Ambev, and Hospital Sírio Libanês.",
+      "company": "InPress Porter Novelli",
+      "date": "out de 2022 - mai de 2023",
+      "photo": "/experiencesPagePhotos/InpressPNI.png"
+    },
+
+    {
+      "title": "Content Marketing Manager",
+      "description": [
+        "Development and implementation of digital strategies for clients.",
+        "• Managed and oversaw the content team.",
+        "• Actively collaborated with the company's Business & AdSales team on strategy development and upselling projects.",
+        "• Expertise in budget management.",
+        "• Skillful oversight of the technical content production team.",
+        "• Ensured brand success through marketing and SEO strategies."
+      ],
+      "company": "Cadastra",
+      "date": "dez de 2021 - ago de 2022",
+      "photo": "/experiencesPagePhotos/Cadastra.jpeg"
+    },
+
+    {
+      "title": "Content Strategy Manager",
+      "description": [
+        "Experienced team leader responsible for the management and development of coordinators and analysts on the content marketing and social media team.",
+        "• Expertise in formulating effective content strategies and leveraging paid amplification for successful campaign outcomes.",
+        "• Proficient in actively monitoring and optimizing social media channel performance.",
+        "• Skilled in utilizing insights and data analysis to enhance account performance and provide recommendations for improvement.",
+        "• Worked with clients such as Mary Kay, EcoRodovias, Diageo, Platos, and Órigo.",
+        "• Proficient in tools including Google Data Studio, Sprinklr, Stilingue, MLabs, Buzzmonitor, Hootsuite, Meltwater, and Google Analytics."
+      ],
+      "company": "Jüssi",
+      "date": "mai de 2021 - dez de 2021",
+      "photo": "/experiencesPagePhotos/JussiAgency.jpeg"
+    },
+    {
+      "title": "Content & Social Media Coordinator",
+      "description": [
+        "Responsible for developing content strategies and digital presences for brands.",
+        "• Definition of brand messages, tones of voice, and personas.",
+        "• Management of content teams for blogs and social media.",
+        "• Data analysis and monitoring of specific campaigns and Always On initiatives.",
+        "• Development and implementation of content strategies to enhance brand presence.",
+        "• Ensuring that established KPIs are met and brand guidelines are followed in all publications."
+      ],
+      "company": "Jüssi",
+      "date": "set de 2020 - dez de 2021",
+      "photo": "/experiencesPagePhotos/JussiAgency.jpeg"
+    },
+    {
+      "title": "Social Media Coordinator",
+      "description": [
+        "Social media team coordination at Catraca Livre, overseeing content production on social platforms.",
+        "• People management and training, empowering team members with the skills and knowledge required for project success.",
+        "• Interface with commercial clients, coordinating and collaborating with external partners to ensure successful project execution.",
+        "• Leadership in editorial projects and supervision of the development and implementation of content strategies and plans.",
+        "• Accountability for internal department goals and external commercial projects, ensuring the achievement of established targets."
+      ],
+      "company": "Catraca Livre",
+      "date": "fev de 2020 - set de 2020",
+      "photo": "/experiencesPagePhotos/CatracaLivre.jpeg"
+    },
+    {
+      "title": "Social Media Analyst",
+      "description": [
+        "As a content team coordinator, I was responsible for the construction and development of strategies and digital presences for various brands through content strategies to defining brand messages, tones of voice, and personas. I also managed content production teams for blogs and social networks, and monitored and analyzed data from specific campaigns and Always On initiatives.",
+        "• Developing content strategies and brand presences for clients from different industries.",
+        "• Managing content production teams for blogs and social networks.",
+        "• Monitoring results to ensure established KPIs were achieved and brand guidelines were followed in all publications.",
+        "• Analyzing data from specific campaigns and Always On initiatives through monthly, quarterly, and semi-annual reports.",
+        "• Monitoring the health of brands on social networks using social listening strategies, sentiment measurement, and competitor monitoring."
+      ],
+      "company": "Catraca Livre",
+      "date": "set de 2018 - set de 2020",
+      "photo": "/experiencesPagePhotos/CatracaLivre.jpeg"
+    },
+    {
+      "title": "Journalist and Social Media",
+      "description": [
+        "Development and implementation of content production strategies and social marketing plans for agency clients.",
+        "• Expertise in fashion and beauty production for filming, ensuring that content is visually engaging and effective.",
+        "• Implementation of campaigns through social media platforms such as Instagram, Facebook, YouTube, and Google.",
+        "• Analysis of metrics, preparation of monthly reports, and presentation of results to clients and stakeholders.",
+        "Clients: C.Kamura (Celso Kamura), Natura, B.drops, and Bioart Biocosmetics."
+      ],
+      "company": "Lamparina Agency",
+      "date": "jan de 2016 - set de 2018",
+      "photo": "/experiencesPagePhotos/LamparinaWebContent.png"
+    },
+    {
+      "title": "Journalist",
+      "description": [
+        "• Content production for the magazine, social media, and website.",
+        "• Provide support during fashion and beauty shootings, ensuring the smooth and efficient execution of every aspect of the production process."
+      ],
+      "company": "Cosmopolitan Brazil Magazine",
+      "date": "jan de 2014 - dez de 2015",
+      "photo": "/experiencesPagePhotos/CosmopolitanBrasil.jpeg"
+    },
+    {
+      "title": "Journalist",
+      "description": [
+        "• Content production for online and print magazines in the beauty, health, and fitness sectors.",
+        "• Organization and support in production of fashion and beauty editorials, ensuring that all aspects of the production run smoothly and efficiently."
+      ],
+      "company": "Shape Magazine",
+      "date": "abr de 2013 - jan de 2014",
+      "photo": "/experiencesPagePhotos/shapemagazine.png"
+    }
+  ],
+  "education": [
+    {
+      "type": "graduation",
+      "school": "Anhenbi Morumbi"
+    },
+    {
+      "type": "Boot Camp",
+      "school": "Iron Hack"
+    }
+  ]
+}
