@@ -12,7 +12,6 @@ import experiencesJson from "../../contentData/experiences.json";
 const Experience = () => {
   const [experiences, setExperiences] = useState(experiencesJson);
   const [selectedExperience, setSelectedExperience] = useState("work");
-
   return (
     <div className="experiencePage">
       <div className="topBannerExperiencePg"></div>
@@ -113,40 +112,112 @@ const Experience = () => {
           <div className="contentInternalText">
             {selectedExperience === "education" ? (
               <>
-                {experiences.education.map((education) => (
-                  <div key={education.id}>
-                    <h3>{education.type}</h3>
-                    <p>{education.school}</p>
+                <>
+                  {experiences.education.degree.map((education) => (
+                    <div className="allContentWork" key={education.id}>
+                      <div
+                        className="photo"
+                        style={{ backgroundImage: `url(${education.photo})` }}
+                      ></div>
+                      <div className="texts">
+                        <div className="resume">
+                          <h3>{education.subject}</h3>
+                          <p
+                            style={{
+                              fontWeight: "600",
+                              fontStyle: "normal",
+                              lineHeight: "normal",
+                            }}
+                          >
+                            {education.school}
+                          </p>
+                          <p>{education.type}</p>
+                          <p style={{ opacity: "0.6", marginTop: "8px" }}>
+                            {education.date}
+                          </p>
+                        </div>
+                        <p>{education.technicalCurriculum}</p>
+                        <hr style={{ width: "100%", margin: "2%" }} />
+                      </div>
+                    </div>
+                  ))}
+                </>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <h3
+                    style={{
+                      alignSelf: "center",
+                      justifyContent: "center",
+                      alignContent: "center",
+                      color: "#434343",
+                      fontSize: "25px",
+                      fontStyle: "normal",
+                      fontWeight: "600",
+                      lineHeight: "normal",
+                    }}
+                  >
+                    Non-degree Courses
+                  </h3>
+                  <div className="nonDegree">
+                    {experiences.education.nonDegree.map((educationND) => (
+                      <div
+                        className="allContentWork2"
+                        style={{}}
+                        key={educationND.id}
+                      >
+                        <div
+                          className="photo"
+                          style={{
+                            backgroundImage: `url(${educationND.photo})`,
+                          }}
+                        ></div>
+                        <div className="texts">
+                          <div className="resume">
+                            <p
+                              style={{
+                                fontWeight: "600",
+                                fontStyle: "normal",
+                                lineHeight: "normal",
+                              }}
+                            >
+                              {educationND.subject}
+                            </p>
+                            <p>{educationND.school}</p>
+                            <p sytle={{ opacity: "0.6", marginTop: "8px" }}>
+                              {educationND.date}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </>
             ) : (
               <>
                 {experiences.work.map((work) => (
                   <div className="allContentWork" key={work.id}>
-                        <div
-                        className="photo"
-                        style={{ backgroundImage: `url(${work.photo})` }}
-                        ></div>
+                    <div
+                      className="photo"
+                      style={{ backgroundImage: `url(${work.photo})` }}
+                    ></div>
 
-                        <div className="texts">
-                        <div className="resume">
-                            <h3>{work.title}</h3>
-                            <p>{work.company}</p>
-                            <p style={{ opacity: "0.6", marginTop: "8px" }}>
-                            {work.date}
-                            </p>
-                        </div>
+                    <div className="texts">
+                      <div className="resume">
+                        <h3>{work.title}</h3>
+                        <p>{work.company}</p>
+                        <p style={{ opacity: "0.6", marginTop: "8px" }}>
+                          {work.date}
+                        </p>
+                      </div>
 
-                        <div className="jobDescription">
-                            <p>{work.description}</p>
-                        </div>
-                        <hr style={{width: "100%", margin: "2%"}}/>
-
+                      <div className="jobDescription">
+                        {work.description.split("\n").map((item, i) => {
+                          return <p key={i}>{item}</p>;
+                        })}
+                      </div>
+                      <hr style={{ width: "100%", margin: "2%" }} />
                     </div>
-                    
                   </div>
-                  
                 ))}
               </>
             )}

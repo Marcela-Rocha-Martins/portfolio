@@ -230,3 +230,14 @@ hr {
   font-weight: 400;
   line-height: normal;
 }
+
+.allContentWork2 {
+    display: flex;
+    flex: 0 0 calc(50% - 20px);
+    gap: 12px;
+  }
+
+  .nonDegree{
+    display: flex;
+    flex-wrap: wrap;
+  }
