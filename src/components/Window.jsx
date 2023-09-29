@@ -28,8 +28,8 @@ const Window = ({
 }) => {
   const [isMaximized, setIsMaximized] = useState(false);
   const [position, setPosition] = useState({
-    top: 120 + 16 * index,
-    left: 120 + 16 * index,
+    top: 80 + 46 * index,
+    left: 200 + 46 * index,
   });
   const [isDragging, setIsDragging] = useState(false);
 
@@ -118,8 +118,9 @@ const Window = ({
           zIndex: page.zIndex,
           visibility: page.isVisible ? "visible" : "hidden",
           maxHeigth: page.innerHeight,
-          width: isMaximized ? "100vw" : "50vw",
-          height: isMaximized ? "100vh" : "70vh",
+          width: isMaximized ? "100vw" : "960px",
+          height: isMaximized ? "100vh" : "600px",
+          minWidth: "600px",
           top: isMaximized ? "0" : position.top,
           left: isMaximized ? "0" : position.left,
         }}
@@ -166,43 +167,55 @@ const Window = ({
               <div className="AllbuttonsSecondLine">
                 <button
                   className="buttonsHandleWindowSL"
-                  style={{ 
-                    backgroundImage: `url(${homeIcon})`, 
+                  style={{
+                    backgroundImage: `url(${homeIcon})`,
                   }}
                 ></button>
                 <button
                   className="buttonsHandleWindowSL"
-                  style={{ 
+                  style={{
                     backgroundImage: `url(${arrowsLeftRightIcon})`,
-                    width:"78px", 
+                    width: "78px",
                   }}
                 ></button>
-                   <button
+                <button
                   className="buttonsHandleWindowSL"
-                  style={{ 
+                  style={{
                     backgroundImage: `url(${reloadIcon})`,
                   }}
                 ></button>
               </div>
 
-              <div className="fakeLink"
-              style={{
-                  width:"auto",
-              }}> https://www.fakedin.com</div>
+              <div
+                className="fakeLink"
+                style={{
+                  width: "auto",
+                }}
+              >
+                {" "}
+                https://www.fakedin.com
+              </div>
 
-              <div className="buttonsHandleWindowSL"
-              style={{
-                backgroundImage: `url(${arrowRight})`,
-                marginRight: "10px",
-              }}></div>
+              <div
+                className="buttonsHandleWindowSL"
+                style={{
+                  backgroundImage: `url(${arrowRight})`,
+                  marginRight: "10px",
+                }}
+              ></div>
             </div>
           ) : null}
         </div>
 
         {pageComponent && (
-          <div className="contentWrapper" style={{
-            flex: "auto", overflowY: "scroll"
-          }}>
+          <div
+            className="contentWrapper"
+            style={{
+              flex: "auto",
+              overflowY: "auto",
+              overflowX: "auto",
+            }}
+          >
             {pageComponent}
           </div>
         )}

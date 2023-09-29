@@ -43,6 +43,16 @@ const Desktop = () => {
             video: "https://www.youtube.com/embed/5_Blq9W9cT8?si=LIzA1dd44bB_jPTY",
         },
     },
+    {
+      id: 3,
+      name: "Code Pen",
+      details: {
+          title: "AnchorNaut",
+          description: "A React application with OpenAI API integration",
+          tecnologies: "CSS, JavaScript, HTML, React, MongoDB",
+          video: "https://www.youtube.com/embed/5_Blq9W9cT8?si=LIzA1dd44bB_jPTY",
+      },
+  },
 ]
 
   return (

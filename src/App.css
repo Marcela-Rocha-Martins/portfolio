@@ -153,8 +153,34 @@
   font-weight: 400;
   line-height: normal;
   cursor: text;
-  
 }
+
+.contentWrapper::-webkit-scrollbar {
+    width: auto;
+    height: 0px;
+  }
+.contentWrapper::-webkit-scrollbar-thumb {
+  background-color: #DAA28F;
+  border-radius: 8px; 
+  border-top: 2px solid #434343;
+  border-bottom: 2px solid #434343;
+  border-left: 2px solid #434343;
+  border-right: 1px solid #434343;
+  margin: 5px;
+  width: 15px;
+}
+.contentWrapper::-webkit-scrollbar-track {
+  border-radius: 0px 0px 8px;
+  border-left: 2px solid #434343;
+  border-top: none;
+  background-color: none;
+  padding: 4px;
+}
+
+.contentWrapper::-webkit-scrollbar-button {
+  display: none;
+}
+
 /* ---------------------------------- END window ------------------------------- */
 
 /*  ----------------------------------- MENU ----------------------------------- */
@@ -370,48 +396,3 @@ ul {
 }
 
 /*  ----------------------------------- FIM FOOTER ----------------------------------- */
-
-
-/*  ----------------------------------- PROJECTS PAGE STYLE ----------------------------------- */
-
-.project-container {
-  display: flex;
-}
-
-.project-list {
-  flex: 1;
-  padding: 10px;
-  border-right: 1px solid #ccc;
-}
-
-.project-list h2 {
-  margin-top: 0;
-}
-
-.project-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.project-list li {
-  cursor: pointer;
-  padding: 5px;
-}
-
-.project-list li.active {
-  background-color: #eee;
-}
-
-.project-details {
-  flex: 2;
-  padding: 10px;
-}
-
-.project-details h2 {
-  margin-top: 0;
-}
-
-.project-details h3 {
-  margin-top: 0;
-}
-/*  ----------------------------------- FIM PROJECTS PAGE STYLE ----------------------------------- */
