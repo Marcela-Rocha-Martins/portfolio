@@ -6,9 +6,9 @@
 }
 
 .leftColumn {
-  height: 100vh;
   overflow: hidden;
-  width: 40%;
+  width: 376px;
+  height: 100vh;
   border-right: 2px solid #434343;
 }
 
@@ -32,28 +32,65 @@
 }
 
 .projectMenuList {
-  flex: 1;
-  padding: 10px;
   border-right: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 24px;
+  padding-top: 36px;
+}
+.menuWrapper {
   display: flex;
-  flex-direction: row;
-  background: red;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: auto;
+  height: 100%;
+  flex: 1;
+}
+
+.project-details {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectVideoWrapper {
+  width: 90%;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 2px solid #434343;
+  background: #a79d9d;
+  align-self: center;
 }
 
 .projectPhoto {
-  width: 100px;
-  height: 100px;
+  width: 145px;
+  height: 145px;
   stroke-width: 2px;
   stroke: #434343;
-  background:#A79D9D;
-  border: 6px solid #F6F4F4;
+  margin-bottom: 12px;
+  background: #a79d9d;
+  border: 6px solid #f6f4f4;
   border-radius: 16px;
   filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
-}
-
-.projectMenuList h2 {
-  margin-top: 0;
 }
 
 .rightColumn {
@@ -63,7 +100,7 @@
 .project-details {
   flex: 2;
   padding: 10px;
-  height: auto;
+  height: 100%;
 }
 .project-details h2 {
   margin-top: 0;
@@ -72,3 +109,58 @@
 .project-details h3 {
   margin-top: 0;
 }
+
+.projectTitle {
+  color: #434343;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 24px;
+  margin-left: 30;
+}
+
+.projectDescription {
+  color: #434343;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.buttonGitHubLive {
+  width: 109px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 2px solid #434343;
+  background: #c98181;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.buttonTitle {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.buttonIcon {
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+}
+
+.bottomContent {
+  display: flex;
+  justify-content: space-between;
+}
+
