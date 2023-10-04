@@ -52,14 +52,15 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  cursor: pointer;
 }
 
 .rightColumn {
   display: flex;
   flex-direction: column;
   padding-top: 40px;
-  padding-right: 20px;
-  padding-left: 20px;
+  /* padding-right: 20px;
+  padding-left: 20px; */
   width: auto;
   height: 100%;
   flex: 1;
@@ -72,13 +73,25 @@
 }
 
 .projectVideoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end; 
+  position: relative; 
   width: 90%;
   height: 350px;
   flex-shrink: 0;
   border-radius: 16px;
-  border: 2px solid #434343;
-  background: #a79d9d;
+  background: transparent;
   align-self: center;
+}
+
+.projectVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid #434343;
 }
 
 .projectPhoto {
@@ -162,5 +175,24 @@
 .bottomContent {
   display: flex;
   justify-content: space-between;
+  padding-right:24px;
+  padding-left: 34px;
 }
 
+.projectTechnologies{
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+  width: 100%;
+  position: absolute;
+  padding: 8px;
+}
+
+.technologyTag {
+  display: inline-flex;
+  align-self: flex-end;
+  padding: 0px 8px;
+  border-radius: 8px;
+  border: 2px solid #434343;
+  background: #ffd042;
+}

@@ -30,7 +30,8 @@ const Desktop = () => {
             title: "Cat x Machine: Vanilla JS Game",
             description: "An endless game using pure javascript, with advanced behaviors, like jump, crounch and so on",
             technologies: ["CSS", "JavaScript", "HTML"],
-            video: "https://www.youtube.com/embed/y0sF5xhGreA?si=uR1ZSRU-HSTciB9g",
+            video: "/projectPagePhotos/VideoTeste.mp4",
+            photo: `/projectPagePhotos/CatXMachine.png`
         },
     },
     {
@@ -40,19 +41,32 @@ const Desktop = () => {
             title: "AnchorNaut",
             description: "A React application with OpenAI API integration",
             technologies: ["JavaScript", "HTML", "React", "MongoDB"],
-            video: "https://www.youtube.com/embed/5_Blq9W9cT8?si=LIzA1dd44bB_jPTY",
+            video: "/projectPagePhotos/VideoTeste.mp4",
+            photo: "/projectPagePhotos/Anchornaut.png"
         },
     },
     {
       id: 3,
       name: "Code Pen",
       details: {
-          title: "AnchorNaut",
-          description: "A React application with OpenAI API integration",
-          technologies: ["CSS", "JavaScript", "HTML", "React", "MongoDB"],
-          video: "https://www.youtube.com/embed/5_Blq9W9cT8?si=LIzA1dd44bB_jPTY",
+          title: "Code Pen",
+          description: "Exercises and features",
+          technologies: ["CSS", "JavaScript", "HTML"],
+          video: "/projectPagePhotos/VideoTeste.mp4",
+          photo: "/projectPagePhotos/CodePen3.png"
       },
   },
+  {
+    id: 3,
+    name: "My Portfolio",
+    details: {
+        title: "My Portfolio",
+        description: "A React application to reunite information about my projects",
+        technologies: ["CSS", "JavaScript", "HTML", "React"],
+        video: "/projectPagePhotos/VideoTeste.mp4",
+        photo: "/projectPagePhotos/MyPortfolio.png"
+    },
+},
 ]
 
   return (

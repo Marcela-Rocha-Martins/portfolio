@@ -26,8 +26,17 @@ function Projects({ zIndex, page, projects }) {
 
           <div className="projectMenuList">
             {projects.map((project) => (
-              <div className="menuWrapper">
-                <div className="projectPhoto"></div>
+              <div
+                className="menuWrapper"
+                onClick={() => setSelectedProject(project)}
+              >
+                <div
+                  className="projectPhoto"
+                  style={{
+                    backgroundImage: `url(${project.details.photo})`,
+                    backgroundSize: "cover",
+                  }}
+                ></div>
                 <div
                   key={project.id}
                   onClick={() => setSelectedProject(project)}
@@ -45,39 +54,61 @@ function Projects({ zIndex, page, projects }) {
             {selectedProject ? (
               <>
                 <div className="projectVideoWrapper">
-                  <div className="projectVideo"></div>
+                  <video className="projectVideo" autoPlay loop muted>
+                    <source
+                      src={`${window.location.origin}${selectedProject.details.video}`}
+                    />
+                  </video>
                   <div className="projectTechnologies">
-                    {selectedProject.details.technologies.map((technology)=> (
-                      <div className="technologyTag" key={technology.id}>{technology}</div>
+                    {selectedProject.details.technologies.map((technology) => (
+                      <div className="technologyTag" key={technology.id}>
+                        {technology}
+                      </div>
                     ))}
-                    </div>
+                  </div>
                 </div>
 
-                <div className="bottomContent" style={{}}>
+                <div className="bottomContent" >
                   <div className="bottomTexts">
-                  <div className="bottomDetails">
-                    <div className="projectTitle">
-                      {selectedProject.details.title}
+                    <div className="bottomDetails">
+                      <div className="projectTitle">
+                        {selectedProject.details.title}
+                      </div>
+                      <div className="projectDescription">
+                        {selectedProject.details.description}
+                      </div>
                     </div>
-                    <div className="projectDescription">
-                      {selectedProject.details.description}
+                  </div>
+
+                  <div
+                    className="buttons"
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "6px",
+                      marginTop: "5%",
+                    }}
+                  >
+                    <div className="buttonGitHubLive">
+                      <div
+                        className="buttonIcon"
+                        style={{
+                          backgroundImage: `url(${gitHubIcon})`,
+                          width: "18px",
+                          height: "18px",
+                        }}
+                      ></div>
+                      <div className="buttonTitle">GitHub</div>
+                    </div>
+
+                    <div className="buttonGitHubLive">
+                      <div
+                        className="buttonIcon"
+                        style={{ backgroundImage: `url(${liveIcon})` }}
+                      ></div>
+                      <div className="buttonTitle">Live</div>
                     </div>
                   </div>
-                  </div>
-               
-
-                <div className="buttons" style={{display: "flex", flexDirection: "column", gap: "6px", marginTop: "5%"}}>
-
-                  <div className="buttonGitHubLive">
-                    <div className="buttonIcon" style={{backgroundImage:`url(${gitHubIcon})`, width: "18px", height: "18px"}}></div>
-                    <div className="buttonTitle">GitHub</div>
-                  </div>
-
-                  <div className="buttonGitHubLive">
-                    <div className="buttonIcon" style={{backgroundImage: `url(${liveIcon})`}}></div>
-                    <div className="buttonTitle">Live</div>
-                  </div>
-                </div>
                 </div>
               </>
             ) : (
