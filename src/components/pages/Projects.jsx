@@ -5,7 +5,7 @@ import gitHubIcon from "../../images/github-icon2.svg";
 import liveIcon from "../../images/live-icon.svg";
 
 function Projects({ zIndex, page, projects }) {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(projects[0]);
 
   return (
     <div>
@@ -28,7 +28,14 @@ function Projects({ zIndex, page, projects }) {
             {projects.map((project) => (
               <div
                 className="menuWrapper"
-                onClick={() => setSelectedProject(project)}
+                onClick={() => {
+                  if (project.name === "Code Pen") {
+                    window.location.href =
+                      "https://codepen.io/Marcela-Rocha-Martins/pens/showcase";
+                  } else {
+                    setSelectedProject(project);
+                  }
+                }}
               >
                 <div
                   className="projectPhoto"
@@ -68,15 +75,18 @@ function Projects({ zIndex, page, projects }) {
                   </div>
                 </div>
 
-                <div className="bottomContent" >
+                <div className="bottomContent">
                   <div className="bottomTexts">
                     <div className="bottomDetails">
                       <div className="projectTitle">
                         {selectedProject.details.title}
                       </div>
-                      <div className="projectDescription">
-                        {selectedProject.details.description}
-                      </div>
+                      <div
+                        className="projectDescription"
+                        dangerouslySetInnerHTML={{
+                          __html: selectedProject.details.description,
+                        }}
+                      ></div>
                     </div>
                   </div>
 
@@ -89,7 +99,12 @@ function Projects({ zIndex, page, projects }) {
                       marginTop: "5%",
                     }}
                   >
-                    <div className="buttonGitHubLive">
+                    <button
+                      className="buttonGitHubLive"
+                      onClick={() =>
+                        (window.location.href = selectedProject.details.github)
+                      }
+                    >
                       <div
                         className="buttonIcon"
                         style={{
@@ -99,9 +114,14 @@ function Projects({ zIndex, page, projects }) {
                         }}
                       ></div>
                       <div className="buttonTitle">GitHub</div>
-                    </div>
+                    </button>
 
-                    <div className="buttonGitHubLive">
+                    <div
+                      className="buttonGitHubLive"
+                      onClick={() =>
+                        (window.location.href = selectedProject.details.live)
+                      }
+                    >
                       <div
                         className="buttonIcon"
                         style={{ backgroundImage: `url(${liveIcon})` }}
@@ -112,7 +132,9 @@ function Projects({ zIndex, page, projects }) {
                 </div>
               </>
             ) : (
-              <p>Select a project to view details</p>
+              <>
+                <p>Select a project to view details</p>
+              </>
             )}
           </div>
         </div>

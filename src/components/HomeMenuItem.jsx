@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import contactIcon from "../images/contact-icon.svg";
-import achievementsIcon from "../images/achievements-icon.svg";
 import experiencesIcon from "../images/experiences-icon.svg";
 import whoIcon from "../images/who-icon.svg";
 import projectsIcon from "../images/projects-icon.svg";
@@ -69,8 +68,6 @@ const HomeMenuItem = ({
             backgroundImage: `url(${
               page.name === "Contact"
                 ? contactIcon
-                : page.name === "Achievements"
-                ? achievementsIcon
                 : page.name === "Experiences"
                 ? experiencesIcon
                 : page.name === "Who am I"

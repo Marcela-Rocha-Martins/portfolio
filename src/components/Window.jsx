@@ -1,9 +1,9 @@
+/* eslint-disable default-case */
 import React, { useState } from "react";
 
 import Draggable from "react-draggable";
 import Contact from "./pages/Contact";
 
-import Achievements from "./pages/Achievements";
 import Experiences from "./pages/Experiences";
 import Projects from "./pages/Projects";
 import Who from "./pages/Who";
@@ -76,12 +76,6 @@ const Window = ({
     switch (page.name) {
       case "Contact":
         pageComponent = <Contact index={index} zIndex={zIndex} page={page} />;
-        break;
-
-      case "Achievements":
-        pageComponent = (
-          <Achievements index={index} zIndex={zIndex} page={page} />
-        );
         break;
 
       case "Experiences":
