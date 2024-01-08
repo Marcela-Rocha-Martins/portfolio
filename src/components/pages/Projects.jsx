@@ -61,11 +61,19 @@ function Projects({ zIndex, page, projects }) {
             {selectedProject ? (
               <>
                 <div className="projectVideoWrapper">
-                  <video className="projectVideo" autoPlay loop muted>
-                    <source
-                      src={`${window.location.origin}${selectedProject.details.video}`}
-                    />
-                  </video>
+                  {selectedProject.details.video ? (
+                    <video
+                      key={`video_${selectedProject.id}`}
+                      className="projectVideo"
+                      autoPlay
+                      loop
+                      muted
+                    >
+                      <source
+                        src={`${window.location.origin}${selectedProject.details.video}`}
+                      />
+                    </video>
+                  ) : null}
                   <div className="projectTechnologies">
                     {selectedProject.details.technologies.map((technology) => (
                       <div className="technologyTag" key={technology.id}>

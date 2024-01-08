@@ -49,7 +49,7 @@ const Desktop = () => {
           "Node & Express",
           "JWT",
         ],
-        video: "/projectPagePhotos/VideoTeste.mp4",
+        video: "/projectPagePhotos/projectVideo.mov",
         photo: "/projectPagePhotos/Anchornaut.png",
         github: "https://github.com/Marcela-Rocha-Martins/AnchorNaut-client",
         live: "https://anchornaut.netlify.app/",
@@ -92,11 +92,10 @@ const Desktop = () => {
         description:
           "A React application to reunite information about my projects",
         technologies: ["CSS", "JavaScript", "HTML", "React"],
-        video: "/projectPagePhotos/VideoTeste.mp4",
         photo: "/projectPagePhotos/MyPortfolio.png",
         github:
-          "https://marcela-rocha-martins.github.io/project-game-catXmachine/",
-        live: "https://github.com/Marcela-Rocha-Martins/project-game-catXmachine",
+          "https://github.com/Marcela-Rocha-Martins/portfolio",
+        live: "https://marcelarochamartins-webdev.vercel.app/",
       },
     },
     {
