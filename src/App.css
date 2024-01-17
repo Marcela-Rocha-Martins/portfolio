@@ -44,7 +44,7 @@
   color: #434343;
   text-align: center;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -74,7 +74,7 @@
   flex-shrink: 0;
   border-radius: 16px 16px 0px 0px;
   border-bottom: 2px solid #434343;
-  background: #c98181;
+  background: #DAA28F;
   box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.4) inset,
     -6px -6px 0px 0px rgba(0, 0, 0, 0.15) inset;
 }
@@ -286,7 +286,7 @@ ul {
 /*  ----------------------------------- FOOTER ----------------------------------- */
 
 .footer {
-  background-color: #efebdd;
+  background-color: #F2E9D8;
   border: 2px solid #434343;
   border-bottom: none;
   display: flex;
@@ -327,12 +327,12 @@ ul {
   flex-shrink: 0;
   border-radius: 64px;
   border: 2px solid #434343;
-  background: #c98181;
+  background: #DAA28F;
   box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.4) inset,
     -6px -6px 0px 0px rgba(0, 0, 0, 0.15) inset;
   color: #fff;
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -357,15 +357,15 @@ ul {
 .miniatures {
   width: 140px;
   height: 48px;
+  border-radius: 16px;
   color: #434343;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  border-radius: 16px;
   border: 2px solid #434343;
-  background: #efebdd;
+  background: #F2E9D8;
   box-shadow: 4px 4px 0px 0px #fff inset,
     -6px -6px 0px 0px rgba(0, 0, 0, 0.25) inset;
   cursor: pointer;
@@ -373,11 +373,11 @@ ul {
 }
 
 .miniaturesActivated {
-  width: 150px;
+  width: 140px;
   height: 48px;
   border-radius: 16px;
   border: 2px solid #434343;
-  background: #b5bfbf;
+  background:  rgba(162, 191, 191, 0.41);
   color: #434343;
   font-family: Poppins;
   font-size: 14px;
@@ -390,9 +390,7 @@ ul {
 }
 
 .miniatures:hover {
-  background: #b5bfbf;
-  color: #434343;
-  box-shadow: 6px 6px 0px 0px rgba(26, 25, 25, 0.25) inset;
+  background: rgba(162, 191, 191, 0.41);
 }
 
 /*  ----------------------------------- FIM FOOTER ----------------------------------- */

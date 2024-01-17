@@ -1,0 +1,106 @@
+.ContactContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  background: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  flex-direction: column;
+}
+
+.ContactContainerTO,
+.ContactContainerFrom,
+.ContactContainerEmail {
+  margin: 0;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 50px;
+  width: 100%;
+  border-bottom: 2px solid #434343;
+  padding-left: 6px;
+  padding-right: 6px;
+  background: #fff;
+}
+
+.ContactContainerTO p {
+  margin: 0;
+}
+
+.ContactContainerFrom input,
+.ContactContainerEmail input,
+.ContactContainerMessage textarea {
+  border: none;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.ContactContainerFrom input:focus,
+.ContactContainerEmail input:focus,
+.ContactContainerMessage textarea:focus {
+  outline: none;
+}
+
+.ContactContainerMessage textarea {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ContactContainerBottomGroup {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.ContactContainerMessage {
+  height: 100%;
+  border-bottom: 2px solid #434343;
+}
+
+.ContactContainerBottomGroupButton {
+  height: 50px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  
+  background: #efebdd;
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.ContactContainerBottomGroupButton input {
+  width: 109px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 2px solid #434343;
+  background: #D1D8CE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #434343;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+}

@@ -105,6 +105,7 @@ function Projects({ zIndex, page, projects }) {
                       flexDirection: "column",
                       gap: "6px",
                       marginTop: "5%",
+                      marginLeft:"5%"
                     }}
                   >
                     <button
@@ -146,6 +147,7 @@ function Projects({ zIndex, page, projects }) {
             )}
           </div>
         </div>
+        
       </div>
     </div>
   );
