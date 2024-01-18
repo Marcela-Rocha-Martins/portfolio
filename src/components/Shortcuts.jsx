@@ -32,7 +32,6 @@ const Shortcurts = ({
           setIsVisible={setIsVisible}
           shortcutList={shortcutList}
         />
-
       ))}
     </div>
   );

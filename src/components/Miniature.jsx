@@ -3,7 +3,7 @@ import React from "react";
 const Miniature = ({
   page,
   activeWindows,
-  setActiveWindows,
+  setActiveWindows, 
   zIndex,
   maxZIndex,
   setMaxZIndex,
@@ -31,8 +31,6 @@ const Miniature = ({
     }
     setActiveWindows(updatedActiveWindows);
   }
-
-// se estiver visivel, o hoverEffect fica aplicado
 
   return (
     <button onClick={changingWindow} className={ page.zIndex === maxZIndex && page.isVisible ? "miniaturesActivated" : "miniatures" }>

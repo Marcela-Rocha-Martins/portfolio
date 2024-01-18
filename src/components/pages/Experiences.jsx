@@ -10,7 +10,7 @@ import experiencesJson from "../../contentData/experiences.json";
 
 const Experience = () => {
   const [experiences, setExperiences] = useState(experiencesJson);
-  const [selectedExperience, setSelectedExperience] = useState("work");
+  const [selectedExperience, setSelectedExperience] = useState("education");
   return (
     <div className="experiencePage">
       <div className="topBannerExperiencePg"></div>
@@ -154,7 +154,7 @@ const Experience = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    Non-degree Courses
+                    Others
                   </h3>
                   <div className="nonDegree">
                     {experiences.education.nonDegree.map((educationND) => (
