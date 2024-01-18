@@ -85,7 +85,7 @@ const Desktop = () => {
         description:
           "This is a React project developed with TypeScript and Vite, simulating a social media feed similar to Twitter. In this application, users can create posts, applaud comments, and interact dynamically.",
         technologies: ["CSS", "Typescript", "HTML", "React", "Vite"],
-        video: "/projectPagePhotos/feedVideo.mov",
+        video: "/projectPagePhotos/feedvideo.mov",
         photo: "/projectPagePhotos/feedphoto.png",
         github:
         "https://github.com/Marcela-Rocha-Martins/react-project1-feed-typescript",
