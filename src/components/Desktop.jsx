@@ -26,7 +26,7 @@ const Desktop = () => {
       details: {
         title: "Cat x Machine",
         description:
-          "browser-based game using HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP). Cat X Machine is a simple web-based game where you control a cat character and try to avoid machines while collecting snacks to gain lives. Use the keyboard to control the cat's jump and crouch movements. ",
+        "Browser-based game developed with <strong>HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP)</strong>. Cat X Machine is a simple web-based game where you control a cat character, attempting to avoid machines while collecting snacks to gain lives. Click on the <strong>'Live'</strong> button and use the keyboard to control the cat's jumping and crouching movements.",       
         technologies: ["CSS", "JavaScript", "HTML", "DOM manipulation", "OOP"],
         video: "/projectPagePhotos/CatxMachine.mp4",
         photo: `/projectPagePhotos/CatXMachine.png`,
