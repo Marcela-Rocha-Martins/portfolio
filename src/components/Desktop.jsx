@@ -2,7 +2,8 @@ import React from "react";
 import Shortcurts from "./Shortcuts";
 import Footer from "../components/Footer";
 import Windows from "../components/Windows";
-import { useState } from "react";
+import WindowMobile from "../components/WindowMobile";
+import { useState, useEffect } from "react";
 
 const Desktop = () => {
   const [activeWindows, setActiveWindows] = useState([]);
@@ -11,6 +12,7 @@ const Desktop = () => {
   const [minimized, setMinimized] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [frontPage, setFrontPage] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const shortcutList = [
     { name: "Projects", id: "projects" },
@@ -19,6 +21,10 @@ const Desktop = () => {
     { name: "Contact", id: "contact" },
   ];
 
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 1000);
+  }, []);
+
   const projects = [
     {
       id: 1,
@@ -26,7 +32,7 @@ const Desktop = () => {
       details: {
         title: "Cat x Machine",
         description:
-        "Browser-based game developed with <strong>HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP)</strong>. Cat X Machine is a simple web-based game where you control a cat character, attempting to avoid machines while collecting snacks to gain lives. Click on the <strong>'Live'</strong> button and use the keyboard to control the cat's jumping and crouching movements.",       
+          "Browser-based game developed with <strong>HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP)</strong>. Cat X Machine is a simple web-based game where you control a cat character, attempting to avoid machines while collecting snacks to gain lives. Click on the <strong>'Live'</strong> button and use the keyboard to control the cat's jumping and crouching movements.",
         technologies: ["CSS", "JavaScript", "HTML", "DOM manipulation", "OOP"],
         video: "/projectPagePhotos/CatxMachine.mp4",
         photo: `/projectPagePhotos/CatXMachine.png`,
@@ -88,7 +94,7 @@ const Desktop = () => {
         video: "/projectPagePhotos/feedvideo.mov",
         photo: "/projectPagePhotos/feedphoto.png",
         github:
-        "https://github.com/Marcela-Rocha-Martins/react-project1-feed-typescript",
+          "https://github.com/Marcela-Rocha-Martins/react-project1-feed-typescript",
         live: "https://react-project1-feed-typescript-dxvea8txu.vercel.app/",
       },
     },
@@ -101,8 +107,7 @@ const Desktop = () => {
           "Apparently, I needed one to land my first job as a web developer, so I went ahead and created it! 🤷‍♀️</br></br>Jokes aside, I came up with the idea of playing around with mimicking operating systems like Mac, LinkedIn, and email. This way, I could have something to inspire my design (initially conceptualized by my husband and refined through a few of my own tweaks) and also provide a unique usability aspect compared to a typical junior dev portfolio.</br></br>We used Figma to facilitate the communication between design and styling in programming. The project was built using React, CSS, and Javascript. For window dragging, I incorporated a React package called Draggable.</br></br>There's still a lot to be tweaked and improved, but I'm thrilled with the outcome! 😊",
         technologies: ["CSS", "JavaScript", "HTML", "React"],
         photo: "/projectPagePhotos/MyPortfolio.png",
-        github:
-          "https://github.com/Marcela-Rocha-Martins/portfolio",
+        github: "https://github.com/Marcela-Rocha-Martins/portfolio",
         live: "https://marcelarochamartins-webdev.vercel.app/",
       },
     },
@@ -122,6 +127,24 @@ const Desktop = () => {
       },
     },
   ];
+  if (isMobile) {
+    return (
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+          background: "#A2BFBF",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          padding: "20% 10% 20% 10%",
+        }}
+      >
+        <WindowMobile />
+      </div>
+    );
+  }
 
   return (
     <>

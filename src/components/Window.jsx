@@ -128,7 +128,7 @@ const Window = ({
             cursor: isDragging ? "grabbing" : "grab",
           }}
         >
-          <div className="firstLine">
+          <div className="">
             <div className="allButtonsFirstLine">
               <button
                 className="buttonsHandleWindow"
