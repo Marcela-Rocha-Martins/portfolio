@@ -99,7 +99,6 @@ const WindowMobile = () => {
             height: "100%",
             display: "flex",
             flexDirection: "column",
-            gap: "10px",
           }}
         >
           <div className="WindowMobileBodyGif" style={{}}>
@@ -126,12 +125,14 @@ const WindowMobile = () => {
             style={{
               color: "#434343",
               fontFamily: "Poppins",
-              margin: "16px",
+              marginLeft: "1.1rem",
+              marginRight: "1.1rem",
+              marginTop: "0px",
            
             }}
           >
-            <h3 style={{ textAlign: "center" }}>📱 Mobile version in Progress!</h3>
-            <p style={{ textAlign: "center" }}>
+            <h3 style={{ textAlign: "center", fontSize: "1rem", margin: "0px" }}>📱 Mobile version in Progress!</h3>
+            <p style={{ textAlign: "center",  fontSize: "0.9rem" }}>
               Hey there, This mobile version is currently basking under
               construction beams, getting a glow-up for your pocket-sized
               pleasure. Meanwhile, feel free to{" "}
