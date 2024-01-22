@@ -23,13 +23,11 @@ const Desktop = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Defina o valor apropriado para sua lógica de dispositivos móveis
+      setIsMobile(window.innerWidth <= 768); 
     };
 
-    // Adiciona um listener de redimensionamento
     window.addEventListener("resize", handleResize);
 
-    // Remove o listener quando o componente é desmontado
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -154,8 +152,7 @@ const Desktop = () => {
         <WindowMobile />
       </div>
     );
-  }
-
+  } else {
   return (
     <>
       <Shortcurts
@@ -203,7 +200,7 @@ const Desktop = () => {
         projects={projects}
       />
     </>
-  );
+    );
+  };
 };
-
 export default Desktop;
