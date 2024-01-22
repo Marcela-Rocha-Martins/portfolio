@@ -12,7 +12,7 @@ const Desktop = () => {
   const [minimized, setMinimized] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [frontPage, setFrontPage] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const shortcutList = [
     { name: "Projects", id: "projects" },
