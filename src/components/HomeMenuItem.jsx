@@ -20,6 +20,10 @@ const HomeMenuItem = ({
   function openWindow() {
     const clickedWindows = [...activeWindows];
 
+    if (page.name === "Who am I") {
+      window.location.href = "https://www.linkedin.com/in/marcelarochamartins/";
+    } else {
+
     let equalsId = false;
 
     for (let i = 0; i < clickedWindows.length; i++) {
@@ -33,6 +37,13 @@ const HomeMenuItem = ({
         setMaxZIndex(newZIndex);
 
         console.log("zIndex: ", clickedWindows[i].zIndex);
+      }
+
+      if (clickedWindows[i].isVisible === false) {
+        clickedWindows[i].isVisible = true;
+        let newIndex = maxZIndex + 1;
+        clickedWindows[i].zIndex = newIndex;
+        setMaxZIndex(newIndex)
       }
     }
     if (!equalsId === true) {
@@ -48,6 +59,7 @@ const HomeMenuItem = ({
     }
     setActiveWindows(clickedWindows);
   }
+}
 
   function openProjectsMenu() {
     if (!isMenuOpen) {
@@ -88,17 +100,7 @@ const HomeMenuItem = ({
 
         <button onClick={openWindow} className="pageName">
           {page.name}{" "}
-        </button>
-
-        {page.name === "Projects" ? (
-          <button
-            className="arrow"
-            onClick={openProjectsMenu}
-            style={{
-              backgroundImage: `url(${arrowIcon})`,
-            }}
-          ></button>
-        ) : null}
+        </button> 
       </div>
 
       {isMenuOpen && <MenuProjects projects={projects} page={page} />}
