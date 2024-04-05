@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ronaldo",
+    "personName": "Ronaldo Peranovich",
+    "personTitle": "Content and Creation Manager at InpressPni agency",
+    "personPhoto": "https://media.licdn.com/dms/image/D4D03AQF6QGU3myvsww/profile-displayphoto-shrink_800_800/0/1693401156947?e=1717632000&v=beta&t=VtJXJ7I9KdB974Wjmz0QEkuuXS4ZiGjyCZj-7kDevsE",
+    "recommendation": "I was lucky and privileged to work with Marcela... A strong, creative woman who inspires her entire team. I believe that a good manager is one who listens, directs, guides and is always committed to seeing the development of his team. After working together for more than a year, I can say that all of these characteristics are present in Marcela's leadership. Furthermore, in the management meetings we have weekly, he always actively participates in suggesting improvements and actions to further improve the content area. It's great to have a partner on the team to exchange experiences and knowledge."
+  },
+  {
+    "id": "alessandra",
+    "personName": "Alessandra Petraglia",
+    "personTitle": "Creative Director at Hábito.cc",
+    "personPhoto": "https://media.licdn.com/dms/image/D4D03AQHrwCnI-IgPqg/profile-displayphoto-shrink_800_800/0/1689709057454?e=1717632000&v=beta&t=bfyIdgl3xANzXhopjIjoHRm0gmH5N7cjZ4YyXZ3tCis",
+    "recommendation": "Marcela is a professional with a strategic outlook on the various formats of content production and distribution across digital platforms. She knows how to solidly explore the potential of each channel, providing the best consumer experience for readers. And all of this is based on result analysis rather than social media guesswork. It's also noteworthy her ability to lead teams with empathy and dialogue. I've worked with her on different projects at Catraca Livre, and the experiences were always enjoyable and rich in knowledge exchange. Marcela is not afraid to embrace and execute new projects with competence, aiming for the best results!"
+  },
+  {
+    "id": "rodrigo",
+    "personName": "Rodrigo Leibel",
+    "personTitle": "Communications, PR, Digital & Events Manager | Brazil, Chile and Argentina at SWAROVSKI",
+    "personPhoto": "https://media.licdn.com/dms/image/D4D03AQHbbvo_85sZ6A/profile-displayphoto-shrink_800_800/0/1667506459962?e=1717632000&v=beta&t=V0t6XC3eQ6smANR1pk_ik1e237zY_my5M36HUZkMkX0",
+    "recommendation": "With a keen eye for the demands and all of the team's needs, Marcela manages to extract the best from the skills of everyone who works on her team. Her management skills, organization combined with all her knowledge made her a key player in my professional growth. Working with Marcela was an experience that fully developed me and allowed me to have the skills and confidence for leadership positions. I recommend Marcela and hope to have more projects in which she is involved in some way soon."
+  },
+  {
+    "id": "alice",
+    "personName": "Alice Dias",
+    "personTitle": "Sr Content Strategist | Vivo Ads and Terra",
+    "personPhoto": "https://media.licdn.com/dms/image/C4D03AQHdqOF39d03qg/profile-displayphoto-shrink_800_800/0/1549564867054?e=1717632000&v=beta&t=PNLBBwq9sbS99aMnfwNiER5xQ73Xb_OATa2_IBbyPos",
+    "recommendation": "I can say with confidence that Marcela was one of the best leaders I've ever had. In a market that ends up overwhelming us, Marcela manages to have a special human perspective on everyone, not just her team, and manages to give space for people to grow in a positive way. Her leadership and empathy, combined with her incredible technical knowledge, results in a dedicated, attentive and creative professional. I learned a lot about Content and Data from Má, who was always educational and fun when teaching. I appreciate every minute of our partnership!"
+  },
+  {
+    "id": "dimas",
+    "personName": "Dimas Ribeiro",
+    "personTitle": "Planner | Specialist in strategy, content and marketing",
+    "personPhoto": "https://media.licdn.com/dms/image/D4D03AQESrSTX31az-g/profile-displayphoto-shrink_800_800/0/1700581257281?e=1717632000&v=beta&t=Qs6Obu2vSpuUuIoF4dt-t1GXOWfKc2Xu_JROPhPb1Jg",
+    "recommendation": "Marcela is one of those inspiring leaders who makes us want to go further. Her knowledge of data and metrics is sharp and well directed within the strategic scope of content production. I learned and continue to learn a lot from such a dedicated, human and open person."
+  }
+]

@@ -1,0 +1,253 @@
+.WhoAmIPage-Container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.WhoAmIPage-Container-Top {
+  background: #4067b2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.475rem;
+  padding-right: 0.575rem;
+  margin-bottom: 1.25rem;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.WhoAmIPage-Container-Top span {
+  font-family: roboto;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.WhoAmIPage-Container-Body {
+  display: grid;
+  grid-gap: 0.5rem;
+  height: 100%;
+}
+
+.WhoAmIPage-Container-Body-Column1-Left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.WhoAmIPage-Container-Body-Column1-Left-Image {
+  border-radius: 8px;
+  border: #ffffff 7px solid;
+  align-self: flex-start;
+  margin-left: 0.75rem;
+}
+
+.WhoAmIPage-Container-Body-Column1-Left-Buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  align-self: flex-start;
+  margin-left: 0.95rem;
+}
+
+.WhoAmIPage-Container-Body-Column1-Left-Buttons-LinkedIn,
+.WhoAmIPage-Container-Body-Column1-Left-Buttons-MessageMe {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  font-family: poppins;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.WhoAmIPage-Container-Body-Column1-Left-Buttons-LinkedIn p,
+.WhoAmIPage-Container-Body-Column1-Left-Buttons-MessageMe p {
+  margin: 0px;
+}
+
+.WhoAmIPage-Container-Body-Column2-Center {
+  height: auto;
+  border: #ebebeb 2px solid;
+  border-radius: 8px;
+  background: white;
+  padding: 1rem;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.WhoAmIPage-Container-Body-Column2-Center-Top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.WhoAmIPage-Container-Body-Column2-Center-Top-Bio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.WhoAmIPage-Container-Body-Column2-Center-Top-Bio p {
+  color: #4343438e;
+  font-size: 0.75rem;
+}
+
+.WhoAmIPage-Container-Body-Column2-Center-Top-Bio h1 {
+  color: #434343;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.WhoAmIPage-Container-Body-Column2-Center-Top-Bio p,
+.WhoAmIPage-Container-Body-Column2-Center-Top-Bio h1 {
+  margin: 0;
+}
+
+.WhoAmIPage-Container-Body-Column2-Center-Top-Slider {
+  display: flex;
+  gap: 6px;
+  height: 108px;
+  width: 100%;
+}
+
+.WhoAmIPage-Container-Body-Column2-Center-Top-Slider img {
+  width: 118px;
+  height: 108px;
+  border: none;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.WhoAmIPage-Container-Body-Column2-Center-Body p {
+  color: #434343;
+  font-size: 12px;
+}
+
+.WhoAmIPage-Container-Body-Column2-Center-Bottom {
+  display: flex;
+  padding-right: 8px;
+}
+
+.WhoAmIPage-Container-Body-Column2-Center-Bottom p {
+  color: #4067b2;
+  font-size: 14px;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right {
+  height: 100%;
+  padding-right: 12px;
+  border: #ebebeb 2px solid;
+  overflow-y: auto;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Content {
+  height: auto;
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Content-Top p {
+  margin: 0;
+  font-size: 12px;
+  color: #4343438e;
+  font-weight: 650;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Testimonials-Title {
+  display: flex;
+  gap: 8px;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Testimonials-Title-Photo {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 2.5px solid #ffffff;
+  box-shadow: 0 0 0 2px #4067b2;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Testimonials-TitleTxT {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Testimonials-Title-Name {
+  font-size: 14px;
+  color: #4067b2;
+  font-weight: 600;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Testimonials-Title-Job {
+  font-size: 10px;
+  color: #4343438e;
+  font-weight: 500;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Testimonials-Title-Name p,
+.WhoAmIPage-Container-Body-Column3-Right-Testimonials-Title-Job p {
+  margin: 0;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Testimonials-RecommendationTxT {
+  font-size: 11px;
+  color: #434343;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Testimonials-RecommendationTxT p {
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 2px;
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Bottom {
+  display: flex;
+  height: 30px;
+  width: 100%;
+  padding: 20px;
+  justify-content: flex-end;
+  background: rgba(255, 255, 255, 0.848);
+  margin-right: 8px;
+  border-radius: 4px;
+  /* Adicione as seguintes propriedades para tornar a div fixa */
+  position: sticky;
+  bottom: 0; /* Para fixar a div no fundo do componente */
+  z-index: 1; /* Garante que a div fixa esteja sobre o conteúdo rolável */
+}
+
+.WhoAmIPage-Container-Body-Column3-Right-Bottom p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4067b2;
+}

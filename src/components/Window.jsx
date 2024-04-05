@@ -75,17 +75,43 @@ const Window = ({
   if (activeWindows[index].isVisible)
     switch (page.name) {
       case "Contact":
-        pageComponent = <Contact index={index} zIndex={zIndex} page={page} />;
+        pageComponent = (
+          <Contact
+            index={index}
+            zIndex={zIndex}
+            page={page}
+            isMaximized={isMaximized}
+            setIsMaximized={setIsMaximized}
+          />
+        );
         break;
 
       case "Experiences":
         pageComponent = (
-          <Experiences index={index} zIndex={zIndex} page={page} />
+          <Experiences
+            index={index}
+            zIndex={zIndex}
+            page={page}
+            isMaximized={isMaximized}
+            setIsMaximized={setIsMaximized}
+          />
         );
         break;
 
       case "Who am I":
-        pageComponent = <Who index={index} zIndex={zIndex} page={page} />;
+        pageComponent = (
+          <Who
+            index={index}
+            zIndex={zIndex}
+            page={page}
+            isMaximized={isMaximized}
+            setIsMaximized={setIsMaximized}
+            activeWindows={activeWindows}
+            setActiveWindows={setActiveWindows}
+            maxZIndex={maxZIndex}
+            setMaxZIndex={setMaxZIndex}
+          />
+        );
         break;
 
       case "Projects":
@@ -95,6 +121,8 @@ const Window = ({
             zIndex={zIndex}
             page={page}
             projects={projects}
+            isMaximized={isMaximized}
+            setIsMaximized={setIsMaximized}
           />
         );
     }
@@ -188,6 +216,49 @@ const Window = ({
               >
                 {" "}
                 https://www.fakedin.com
+              </div>
+
+              <div
+                className="buttonsHandleWindowSL"
+                style={{
+                  backgroundImage: `url(${arrowRight})`,
+                  marginRight: "10px",
+                }}
+              ></div>
+            </div>
+          ) : null}
+          {page.name === "Who am I" ? (
+            <div className="secondLine">
+              <div className="AllbuttonsSecondLine">
+                <button
+                  className="buttonsHandleWindowSL"
+                  style={{
+                    backgroundImage: `url(${homeIcon})`,
+                  }}
+                ></button>
+                <button
+                  className="buttonsHandleWindowSL"
+                  style={{
+                    backgroundImage: `url(${arrowsLeftRightIcon})`,
+                    width: "78px",
+                  }}
+                ></button>
+                <button
+                  className="buttonsHandleWindowSL"
+                  style={{
+                    backgroundImage: `url(${reloadIcon})`,
+                  }}
+                ></button>
+              </div>
+
+              <div
+                className="fakeLink"
+                style={{
+                  width: "auto",
+                }}
+              >
+                {" "}
+                https://www.fakebook.com
               </div>
 
               <div

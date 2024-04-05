@@ -3,7 +3,7 @@ import "./Projects.css";
 import searchIcon from "../../images/search-icon.svg";
 import gitHubIcon from "../../images/github-icon2.svg";
 import liveIcon from "../../images/live-icon.svg";
-import data from "./data.json";
+import data from "./projectsData.json";
 
 function Projects({ zIndex, page, projects }) {
   const [selectedProject, setSelectedProject] = useState(projects[0]);

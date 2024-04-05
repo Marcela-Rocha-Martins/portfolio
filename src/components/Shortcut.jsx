@@ -16,10 +16,6 @@ const Shortcut = ({
 
     const clickedWindows = [...activeWindows];
     console.log(clickedWindows);
-
-    if (page.name === "Who am I") {
-      window.location.href = "https://www.linkedin.com/in/marcelarochamartins/";
-    } else {
       let equalsId = false;
 
       for (let i = 0; i < clickedWindows.length; i++) {
@@ -54,7 +50,6 @@ const Shortcut = ({
         // console.log (updatedPage, "updatedPage");
       }
       setActiveWindows(clickedWindows);
-    }
   }
 
   return (
