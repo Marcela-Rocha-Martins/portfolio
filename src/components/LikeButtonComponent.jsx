@@ -27,7 +27,8 @@ function LikeButton(bodyColumn2CenterBottomP, { textId }) {
         localStorage.setItem(`likes_${textId}`, newTotalLikes);
         return newTotalLikes;
       });
-    } else {
+      console.log(totalLikes);
+    } else if (!liked) {
       localStorage.setItem(`liked_${textId}`, true);
       setLiked(true);
       setTotalLikes((prevTotalLikes) => {
@@ -35,6 +36,7 @@ function LikeButton(bodyColumn2CenterBottomP, { textId }) {
         localStorage.setItem(`likes_${textId}`, newTotalLikes);
         return newTotalLikes;
       });
+      console.log(totalLikes);
     }
   };
 
@@ -91,9 +93,13 @@ function LikeButton(bodyColumn2CenterBottomP, { textId }) {
             color: "#4343438e",
           }}
         >
-          <span style={{ fontWeight: "600" }}>You</span> and{" "}
-          <span style={{ fontWeight: "600" }}>{totalLikes}</span> others liked
-          this
+          {totalLikes === 1 ? (
+            "You liked this"
+          ) : totalLikes === 2 ? (
+            "You and 1 other liked this"
+          ) : totalLikes > 2 ? (
+            `You and ${totalLikes} others liked this`
+          ) : null}
         </p>
       ) : (
         <p
@@ -103,8 +109,13 @@ function LikeButton(bodyColumn2CenterBottomP, { textId }) {
             color: "#4343438e",
           }}
         >
-          <span style={{ fontWeight: "600" }}>{totalLikes}</span> people liked
-          this
+          {totalLikes < 1 ? null : (
+            <>
+              <span style={{ fontWeight: "600" }}>{totalLikes}</span>{" "}
+              {totalLikes > 1 ? "people " : "person "}
+              liked this
+            </>
+          )}
         </p>
       )}
     </div>
