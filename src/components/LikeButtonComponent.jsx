@@ -7,13 +7,11 @@ function LikeButton(bodyColumn2CenterBottomP, { textId }) {
   const [totalLikes, setTotalLikes] = useState(0);
 
   useEffect(() => {
-    // Verifica se o usuário já curtiu o texto ao montar o componente
     const userLiked = localStorage.getItem(`liked_${textId}`);
     if (userLiked) {
       setLiked(true);
     }
 
-    // Recupera o total de likes do texto ao montar o componente
     const textLikes = localStorage.getItem(`likes_${textId}`);
     if (textLikes) {
       setTotalLikes(parseInt(textLikes));
@@ -24,13 +22,19 @@ function LikeButton(bodyColumn2CenterBottomP, { textId }) {
     if (liked) {
       localStorage.removeItem(`liked_${textId}`);
       setLiked(false);
-      setTotalLikes(totalLikes - 1);
-      localStorage.setItem(`likes_${textId}`, totalLikes - 1);
+      setTotalLikes((prevTotalLikes) => {
+        const newTotalLikes = prevTotalLikes - 1;
+        localStorage.setItem(`likes_${textId}`, newTotalLikes);
+        return newTotalLikes;
+      });
     } else {
       localStorage.setItem(`liked_${textId}`, true);
       setLiked(true);
-      setTotalLikes(totalLikes + 1);
-      localStorage.setItem(`likes_${textId}`, totalLikes + 1);
+      setTotalLikes((prevTotalLikes) => {
+        const newTotalLikes = prevTotalLikes + 1;
+        localStorage.setItem(`likes_${textId}`, newTotalLikes);
+        return newTotalLikes;
+      });
     }
   };
 
@@ -92,11 +96,13 @@ function LikeButton(bodyColumn2CenterBottomP, { textId }) {
           this
         </p>
       ) : (
-        <p style={{
-          margin: "0",
-          fontSize: "12px",
-          color: "#4343438e",
-        }}>
+        <p
+          style={{
+            margin: "0",
+            fontSize: "12px",
+            color: "#4343438e",
+          }}
+        >
           <span style={{ fontWeight: "600" }}>{totalLikes}</span> people liked
           this
         </p>

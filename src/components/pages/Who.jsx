@@ -141,7 +141,6 @@ function Who({
 
       clickedWindows.push(updatedPage);
     }
-
     setActiveWindows(clickedWindows);
   }
   return (
