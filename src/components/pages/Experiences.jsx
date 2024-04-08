@@ -38,7 +38,12 @@ const Experience = () => {
         </div>
 
         <hr />
-
+        <p align="center" style={{ margin: "0", marginBottom: "20px" }}>
+          <img
+            src="https://skillicons.dev/icons?i=js,ts,html,css,jquery,bootstrap,tailwind,nodejs,express,vue,git,github,mongodb,firebase,react,nextjs&theme=dark&perline=4"
+            alt="technologies icons"
+          />
+        </p>
         <div className="buttonsExperiencePage">
           <button
             onClick={() =>
