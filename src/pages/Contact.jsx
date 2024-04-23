@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-expressions */
 import { React, useState } from "react";
-import "./Contact.css";
+import "./styles/Contact.css";
 import emailjs from "@emailjs/browser";
 
-function Contact({ zIndex, page }) {
+function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -15,7 +15,6 @@ function Contact({ zIndex, page }) {
       alert("fulfill all the required fields");
       return;
     }
-    // alert("TESTE")
 
     const templateParams = {
       from_name: name,
@@ -36,7 +35,7 @@ function Contact({ zIndex, page }) {
           setName("");
           setEmail("");
           setMessage("");
-          alert("Your message has been sent. Thank you! :)")
+          alert("Your message has been sent. Thank you! :)");
         },
         (err) => {
           console.log("failed: ", err);
@@ -47,25 +46,15 @@ function Contact({ zIndex, page }) {
   return (
     <div className="ContactContainer">
       <div className="ContactContainerTO">
-        <p style={{ fontWeight: "800" }}>To:</p>
-        <div
-          style={{
-            display: "flex",
-            gap: "16px",
-            background: "#efebdd",
-            paddingLeft: "8px",
-            paddingRight: "8px",
-            borderRadius: "6px",
-            borderBottom: "1px solid #858282",
-          }}
-        >
-          <p style={{ fontWeight: "600" }}>marcelarochamartins@gmail.com</p>
+        <p>To:</p>
+        <div className="ContactContainerSpan">
+          <p>marcelarochamartins@gmail.com</p>
           <p style={{ fontWeight: "400" }}>x</p>
         </div>
       </div>
       <form className="form" onSubmit={sendEmail}>
-        <div className="ContactContainerFrom">
-          <p style={{ fontWeight: "800" }}>From:</p>
+        <div className={`ContactContainerFrom `}>
+          <p>From:</p>
           <input
             className="input"
             type="text"
@@ -76,7 +65,7 @@ function Contact({ zIndex, page }) {
         </div>
 
         <div className="ContactContainerEmail">
-          <p style={{ fontWeight: "800" }}>Your email:</p>
+          <p>Your email:</p>
           <input
             className="input"
             type="text"

@@ -239,10 +239,9 @@
   background: rgba(255, 255, 255, 0.848);
   margin-right: 8px;
   border-radius: 4px;
-  /* Adicione as seguintes propriedades para tornar a div fixa */
   position: sticky;
-  bottom: 0; /* Para fixar a div no fundo do componente */
-  z-index: 1; /* Garante que a div fixa esteja sobre o conteúdo rolável */
+  bottom: 0; 
+  z-index: 1;
 }
 
 .WhoAmIPage-Container-Body-Column3-Right-Bottom p {

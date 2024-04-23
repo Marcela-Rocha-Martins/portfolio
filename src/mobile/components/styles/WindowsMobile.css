@@ -1,0 +1,23 @@
+.WindowsMobileContainer {
+  width: 100vw;
+  height: calc(100vh - (152px));
+  position: absolute;
+  top: 40px;
+}
+
+.WindowMobile {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+  height: 100%;
+  background: #F4EFEE;
+}
+
+.WindowMobile-Button {
+  position: fixed;
+  bottom: calc(112px + 1rem); 
+  right: 20px; 
+  z-index: 999;
+}

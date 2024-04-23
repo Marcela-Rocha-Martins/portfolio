@@ -3,7 +3,7 @@ import Miniature from "./Miniature";
 import HomeMenu from "./HomeMenu";
 import Clock from "./Clock";
 import clockIcon from "../images/clock-icon.svg";
-import "../App.css";
+import "../";
 
 const Footer = ({
   activeWindows,
@@ -17,8 +17,6 @@ const Footer = ({
   isVisible,
   setIsVisible,
   shortcutList,
-  frontPage,
-  setFrontPage,
   projects,
 }) => {
   const [isHomeMenu, setIsHomeMenu] = useState(false);
@@ -43,7 +41,6 @@ const Footer = ({
           setMinimized={setMinimized}
           isVisible={isVisible}
           setIsVisible={setIsVisible}
-          frontPage={frontPage}
           projects={projects}
         />
       )}
@@ -67,7 +64,6 @@ const Footer = ({
             setMinimized={setMinimized}
             isVisible={isVisible}
             setIsVisible={setIsVisible}
-            frontPage={frontPage}
           />
         ))}
       </div>

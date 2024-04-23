@@ -1,0 +1,120 @@
+.ContactContainerMOB {
+  width: 100%;
+  height: calc(100vh - 152px);
+  display: flex;
+  position: relative;
+  background: white;
+  flex-direction: column;
+}
+
+.ContactContainerTOMOB,
+.ContactContainerFromMOB,
+.ContactContainerEmailMOB {
+  margin: 0;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 50px;
+  width: 100%;
+  border-bottom: 2px solid #434343;
+  padding-left: 6px;
+  padding-right: 6px;
+  background: #fff;
+}
+
+.ContactContainerFromMOB p {
+  font-weight: 800;
+}
+
+.ContactContainerTOMOB p {
+  margin: 0;
+  font-weight: 800;
+}
+
+.ContactContainerSpanMOB {
+  display: flex;
+  gap: 16px;
+  background: #efebdd;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 6px;
+  border-bottom: 1px solid #858282;
+}
+
+.ContactContainerSpanMOB p {
+  font-weight: 600;
+}
+
+.ContactContainerFromMOB input,
+.ContactContainerEmailMOB input,
+.ContactContainerMessageMOB textarea {
+  border: none;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.ContactContainerFromMOB input:focus,
+.ContactContainerEmailMOB input:focus,
+.ContactContainerMessageMOB textarea:focus {
+  outline: none;
+}
+
+.ContactContainerEmailMOB p {
+  font-weight: 800;
+}
+
+.ContactContainerMessageMOB textarea {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.formMOB {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ContactContainerBottomGroupMOB {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.ContactContainerMessageMOB {
+  height: 100%;
+}
+
+.ContactContainerBottomGroupButtonMOB {
+  height: 80px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.ContactContainerBottomGroupButtonMOB input {
+  width: 80px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #434343;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #ffff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

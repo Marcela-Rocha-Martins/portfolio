@@ -1,25 +1,25 @@
 import React from "react";
-import "./Who.css";
-import LikeButton from "../LikeButtonComponent";
-import data from "./testimonialsData.json";
+import "./styles/Who.css";
+import LikeButton from "../components/LikeButtonComponent";
+import data from "../data/testimonialsData.json";
 
 // Icons
-import projectsIconWhoPage from "../../images/WhoPage-projects.svg";
-import experienceIconWhoPage from "../../images/WhoPage-experience.svg";
-import profilePhotoWhoPage from "../../images/WhoPage-photo.png";
-import linkedinIconWhoPage from "../../images/WhoPageLinkedIn.svg";
-import MessageIconWhoPage from "../../images/WhoPageMessage.svg";
-import WorkIconWhoPage from "../../images/WhoPageWorkIcon.svg";
-import LocationPinWhoPage from "../../images/WhoPageLocationPin.svg";
-import HomeIconWhoPage from "../../images/WhoPageHomeIcon.svg";
-import CakeIconWhoPage from "../../images/WhoPageCakeIcon.svg";
-import SeeMoreIconWhoPage from "../../images/WhoPageSeeMoreIcon.svg";
+import projectsIconWhoPage from "../images/whoPageIcons/WhoPage-projects.svg"
+import experienceIconWhoPage from "../images/whoPageIcons/WhoPage-experience.svg";
+import profilePhotoWhoPage from "../images/whoPageIcons/WhoPage-photo.png";
+import linkedinIconWhoPage from "../images/whoPageIcons/WhoPageLinkedIn.svg";
+import MessageIconWhoPage from "../images/whoPageIcons/WhoPageMessage.svg";
+import WorkIconWhoPage from "../images/whoPageIcons/WhoPageWorkIcon.svg";
+import LocationPinWhoPage from "../images/whoPageIcons/WhoPageLocationPin.svg";
+import HomeIconWhoPage from "../images/whoPageIcons/WhoPageHomeIcon.svg";
+import CakeIconWhoPage from "../images/whoPageIcons/WhoPageCakeIcon.svg";
+import SeeMoreIconWhoPage from "../images/whoPageIcons/WhoPageSeeMoreIcon.svg";
 
 // Photos
-import Photo1 from "../../images/whoPagePhotos/1.png";
-import Photo2 from "../../images/whoPagePhotos/2.png";
-import Photo3 from "../../images/whoPagePhotos/3.png";
-import Photo4 from "../../images/whoPagePhotos/4.png";
+import Photo1 from "../images/whoPagePhotos/1.png";
+import Photo2 from "../images/whoPagePhotos/2.png";
+import Photo3 from "../images/whoPagePhotos/3.png";
+import Photo4 from "../images/whoPagePhotos/4.png";
 
 function Who({
   isMaximized,
@@ -150,8 +150,8 @@ function Who({
         <div
           className="WhoAmIPage-Container-Top-Icons"
           style={{ alignItems: "center", display: "flex", gap: "8px" }}
-        >
-          <button
+        > 
+          <button 
             onClick={() => openWindow("projects")}
             style={{
               background: "none",

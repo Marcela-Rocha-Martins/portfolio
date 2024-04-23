@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "./Experiences.css";
+import "./styles/Experiences.css";
 
-import profilePic from "../../images/profilepic.jpg";
-import locationIcon from "../../images/location-icon.svg";
-import linkedinIcon from "../../images/linkedin-icon.svg";
-import githubIcon from "../../images/github-icon.svg";
-import downloadIcon from "../../images/download-icon.svg";
-import experiencesJson from "../../contentData/experiences.json";
+import profilePic from "./../images/profilepic.jpg";
+import locationIcon from "./../images/location-icon.svg";
+import linkedinIcon from "./../images/linkedin-icon.svg";
+import githubIcon from "./../images/github-icon.svg";
+import downloadIcon from "./../images/download-icon.svg";
+import experiencesJson from "../data/experiences.json";
 
 const Experience = () => {
   const [experiences, setExperiences] = useState(experiencesJson);

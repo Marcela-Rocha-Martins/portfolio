@@ -1,0 +1,214 @@
+.ExperiencesMOB-Container {
+  height: calc(100vh - 112px - 40px);
+  width: 100%;
+  background: #5c8fc5;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.ExperiencesMOB-Container-Header {
+  background: #5c8fc5;
+  padding: 24px;
+  padding-bottom: 0px;
+  flex: 0 0 35%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ExperiencesMOB-Container-Header-Top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 16px;
+  align-items: center;
+}
+
+.Container-Header-Top-Pic {
+  width: 131px;
+  height: 131px;
+  align-self: center;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 6px solid #fff;
+  background: lightgray 50% / cover no-repeat;
+}
+
+.Container-Header-Top-Content {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Container-Header-Top-Content-Name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.Container-Header-Top-Content-Job {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+}
+
+.Container-Header-Top-Content-Location {
+  display: flex;
+}
+.locationTxt {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+}
+.locationIcon {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.ExperiencesMOB-Container-Header-Buttons {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Container-Header-Buttons-Left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.Container-Header-Buttons-Left button,
+a {
+  margin: 0px;
+  background: none;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LKIcon,
+.downloadIcon,
+.githubIcon {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.Container-Header-Buttons-Right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-items: flex-end;
+}
+
+.Container-Header-Buttons-Right p {
+  margin: 0px;
+  cursor: pointer;
+  color: #ffff;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.ExperiencesMOB-Container-Body {
+  flex: 0 0 65%;
+  background: #ffff;
+  border-radius: 20px 20px 0 0;
+  border: #ebe9e8 solid 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.hrClass {
+  width: 90%;
+  align-self: center;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 12px;
+  margin-top: 0px;
+  border: 0.5px solid #c1bcbc;
+}
+
+.allContentWorkMOB {
+  display: flex;
+  gap: 12px;
+}
+
+.photoMOB {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  border-radius: 8px;
+  border: 2px solid #ebe9e8;
+  background: lightgray 50% / cover no-repeat;
+}
+
+.textsMOB {
+  display: flex;
+  flex-direction: column;
+  margin: 3px;
+}
+
+.resumeMOB h3 {
+  margin: 0px;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.resumeMOB p {
+  margin: 0px;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.nonDegreeMOB {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.allContentWork2MOB {
+  display: flex;
+  flex: 0 0 calc(50% - 20px);
+  gap: 8px;
+}
+
+.jobDescriptionMOB {
+  flex-shrink: 0;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px;
+  padding: 0px;
+}
+
+.jobDescriptionMOB p {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}

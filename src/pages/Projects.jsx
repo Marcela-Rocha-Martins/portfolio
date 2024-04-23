@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./Projects.css";
-import searchIcon from "../../images/search-icon.svg";
-import gitHubIcon from "../../images/github-icon2.svg";
-import liveIcon from "../../images/live-icon.svg";
-import data from "./projectsData.json";
+import "./styles/Projects.css";
+import searchIcon from "./../images/search-icon.svg";
+import gitHubIcon from "./../images/github-icon2.svg";
+import liveIcon from "./../images/live-icon.svg";
+import data from "../data/projectsData.json";
 
-function Projects({ zIndex, page, projects }) {
+function Projects({ projects }) {
   const [selectedProject, setSelectedProject] = useState(projects[0]);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredData, setFilteredData] = useState(data);

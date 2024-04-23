@@ -29,8 +29,27 @@
   background: #fff;
 }
 
+.ContactContainerFrom p{
+  font-weight: 800;
+}
+
 .ContactContainerTO p {
   margin: 0;
+  font-weight: 800;
+}
+
+.ContactContainerSpan {
+  display: flex;
+  gap: 16px;
+  background: #efebdd;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 6px;
+  border-bottom: 1px solid #858282;
+}
+
+.ContactContainerSpan p {
+  font-weight: 600;
 }
 
 .ContactContainerFrom input,
@@ -49,6 +68,10 @@
 .ContactContainerEmail input:focus,
 .ContactContainerMessage textarea:focus {
   outline: none;
+}
+
+.ContactContainerEmail p{
+  font-weight: 800;
 }
 
 .ContactContainerMessage textarea {
@@ -77,7 +100,7 @@
   height: 50px;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
-  
+
   background: #efebdd;
   padding-left: 10px;
   padding-top: 7px;
@@ -89,7 +112,7 @@
   flex-shrink: 0;
   border-radius: 12px;
   border: 2px solid #434343;
-  background: #D1D8CE;
+  background: #d1d8ce;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,5 +125,4 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-
 }

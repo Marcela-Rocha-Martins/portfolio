@@ -10,46 +10,44 @@ const Shortcut = ({
   setActiveWindows,
   maxZIndex,
   setMaxZIndex,
-  
 }) => {
   function openWindow() {
-
     const clickedWindows = [...activeWindows];
     console.log(clickedWindows);
-      let equalsId = false;
+    let equalsId = false;
 
-      for (let i = 0; i < clickedWindows.length; i++) {
-        if (clickedWindows[i].id === page.id) {
-          equalsId = true;
+    for (let i = 0; i < clickedWindows.length; i++) {
+      if (clickedWindows[i].id === page.id) {
+        equalsId = true;
 
-          let newZIndex = maxZIndex + 1;
+        let newZIndex = maxZIndex + 1;
 
-          clickedWindows[i].zIndex = newZIndex;
-
-          setMaxZIndex(newZIndex);
-
-          console.log("zIndex: ", clickedWindows[i].zIndex);
-
-          if (clickedWindows[i].isVisible === false) {
-            clickedWindows[i].isVisible = true;
-            let newIndex = maxZIndex + 1;
-            clickedWindows[i].zIndex = newIndex;
-            setMaxZIndex(newIndex)
-          }
-        }
-      }
-      if (!equalsId === true) {
-        const newZIndex = maxZIndex + 1;
+        clickedWindows[i].zIndex = newZIndex;
 
         setMaxZIndex(newZIndex);
 
-        const updatedPage = { ...page, zIndex: newZIndex, isVisible: true };
+        console.log("zIndex: ", clickedWindows[i].zIndex);
 
-        clickedWindows.push(updatedPage);
-
-        // console.log (updatedPage, "updatedPage");
+        if (clickedWindows[i].isVisible === false) {
+          clickedWindows[i].isVisible = true;
+          let newIndex = maxZIndex + 1;
+          clickedWindows[i].zIndex = newIndex;
+          setMaxZIndex(newIndex);
+        }
       }
-      setActiveWindows(clickedWindows);
+    }
+    if (!equalsId === true) {
+      const newZIndex = maxZIndex + 1;
+
+      setMaxZIndex(newZIndex);
+
+      const updatedPage = { ...page, zIndex: newZIndex, isVisible: true };
+
+      clickedWindows.push(updatedPage);
+
+      // console.log (updatedPage, "updatedPage");
+    }
+    setActiveWindows(clickedWindows);
   }
 
   return (

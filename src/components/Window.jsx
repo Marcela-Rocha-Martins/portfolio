@@ -1,16 +1,15 @@
 /* eslint-disable default-case */
 import React, { useState } from "react";
-
 import Draggable from "react-draggable";
-import Contact from "./pages/Contact";
-
-import Experiences from "./pages/Experiences";
-import Projects from "./pages/Projects";
-import Who from "./pages/Who";
+//pages
+import Experiences from "../pages/Experiences";
+import Projects from "../pages/Projects";
+import Who from "../pages/Who";
+import Contact from "../pages/Contact";
+//icons
 import closeButton from "../images/closeButton.svg";
 import minimizedButton from "../images/minimizedButton.svg";
 import maximizedButton from "../images/maximizedButton.svg";
-
 import homeIcon from "../images/home-Icon.svg";
 import arrowsLeftRightIcon from "../images/arrowsLeftRight-icon.svg";
 import reloadIcon from "../images/reload.svg";
@@ -25,6 +24,7 @@ const Window = ({
   maxZIndex,
   setMaxZIndex,
   projects,
+  isTabletOrMobile,
 }) => {
   const [isMaximized, setIsMaximized] = useState(false);
   const [position, setPosition] = useState({
@@ -82,6 +82,7 @@ const Window = ({
             page={page}
             isMaximized={isMaximized}
             setIsMaximized={setIsMaximized}
+            isTabletOrMobile={isTabletOrMobile}
           />
         );
         break;
@@ -94,6 +95,7 @@ const Window = ({
             page={page}
             isMaximized={isMaximized}
             setIsMaximized={setIsMaximized}
+            isTabletOrMobile={isTabletOrMobile}
           />
         );
         break;
@@ -110,6 +112,7 @@ const Window = ({
             setActiveWindows={setActiveWindows}
             maxZIndex={maxZIndex}
             setMaxZIndex={setMaxZIndex}
+            isTabletOrMobile={isTabletOrMobile}
           />
         );
         break;
@@ -123,6 +126,7 @@ const Window = ({
             projects={projects}
             isMaximized={isMaximized}
             setIsMaximized={setIsMaximized}
+            isTabletOrMobile={isTabletOrMobile}
           />
         );
     }

@@ -1,0 +1,224 @@
+.projectContainerMOB {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 155px);
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.searchBarMOB {
+  background: #ffffff;
+  border-bottom: 2px solid #434343;
+  border-left: 2px solid #434343;
+  border-top: 2px solid #434343;
+  border-radius: 8px 8px 8px 8px;
+  width: 80%;
+  height: 40px;
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.inputMOB {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  justify-content: center;
+  width: auto;
+}
+
+.inputMOB input {
+  border: none;
+  background-color: transparent !important;
+  width: 100%;
+}
+
+.inputMOB input:focus {
+  outline: none;
+}
+
+.squareMOB {
+  width: 50px;
+  border-left: 2px solid #434343;
+  border-right: 2px solid #434343;
+  border-radius: 0px 8px 8px 0px;
+  cursor: pointer;
+  background-color: #ecbe72;
+}
+
+.projectMenuListMOB {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  overflow: auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 8px;
+}
+
+.menuWrapperMOB {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  margin: 8px;
+  color: #434343;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.projectPhotoMOB {
+  width: 130px;
+  height: 130px;
+  stroke-width: 2px;
+  stroke: #434343;
+  margin-bottom: 8px;
+  background: #a79d9d;
+  border: 6px solid #f6f4f4;
+  border-radius: 16px;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
+}
+
+/*-------------------------- project details component --------------------------*/
+
+.projectDetailsContainerMOB {
+  height: calc(100vh - 155px);
+  position: fixed;
+  top: 40px;
+  z-index: 999;
+  background-color: #f4efee;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
+}
+
+.closeButtonMOB {
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  right: 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButtonMOB p {
+  font-weight: 600;
+  font-size: 16px;
+  color: #434343;
+  margin: 0;
+  z-index: 8000000;
+}
+
+.projectVideoWrapperMOB {
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  position: relative;
+  max-width: 90vw;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: transparent;
+  align-self: center;
+}
+
+.projectVideoMOB {
+  height: auto;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-top: 12px;
+  border: 2px solid #434343;
+}
+
+.projectTechnologiesMOB {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  padding: 8px;
+}
+.technologyTagMOB {
+  display: inline-flex;
+  align-self: flex-end;
+  padding: 0px 8px;
+  border-radius: 8px;
+  border: 2px solid #434343;
+  background: #d9a18f;
+  font-size: 10px;
+}
+
+.projectDetailsMOB h2 {
+  color: #434343;
+  font-size: 20px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectNameMOB {
+  display: flex;
+}
+
+.bottomContentMOB {
+  margin: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.projectDescriptionMOB {
+  color: #434343;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.buttonGitHubLiveMOB {
+  width: 80px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 2px solid #434343;
+  background: #A2BFBF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.buttonIconMOB{
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+}
+
+.buttonTitleMOB{
+    color: #434343;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

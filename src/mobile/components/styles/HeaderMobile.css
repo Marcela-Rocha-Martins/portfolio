@@ -1,0 +1,17 @@
+.HeaderMobile-Container {
+  background: #f2e9d8;
+  border-bottom: 2px solid #434343;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.HeaderMobile-Container-Hours {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #434343;
+}

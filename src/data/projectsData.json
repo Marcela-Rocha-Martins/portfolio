@@ -82,5 +82,19 @@
       "live": "https://react-project2-timer-typescript-7n43rb9ag.vercel.app/",
       "github": "https://github.com/Marcela-Rocha-Martins/react-project2-timer-typescript"
     }
+  },
+  {
+    "id": 7,
+    "name": "Habits Tracker",
+    "details": {
+      "title": "Habits Tracker",
+      "description": "<br><strong>Description:</strong><br><br>Habit Tracker is a web application that empowers users to monitor their daily habits. It offers a straightforward and efficient method to track progress towards personal goals, aiding in the maintenance of consistency and focus on significant habits.<br><br><strong>Key Features:</strong><br><br>- <strong>Habit registration:</strong> Users can effortlessly register new habits to monitor their progress.<br><br>- <strong>Progress visualization:</strong> A calendar view exhibits the history of habit completion over time.<br><br>- <strong>Flexibility:</strong> Users have the freedom to add, edit, or delete habits as necessary.<br><br>- <strong>Integration with Vercel KV:</strong> Data storage is seamlessly managed using Vercel KV, ensuring scalability and top-notch performance.<br><br><strong>Main technologies used:</strong><br><br>- Next.js<br>- Tailwind CSS<br>- Vercel KV",
+      "technologies": ["CSS", "Typescript", "HTML", "React", "Next.Js", "Tailwind"],
+      "video": "/projectPagePhotos/HabitsManager.mov",
+      "photo": "/projectPagePhotos/HabitsManager.png",
+      "live": "https://habits-manager-next-bevj33fvw-marcela-rochas-projects.vercel.app",
+      "github": "https://github.com/Marcela-Rocha-Martins/habits-manager-nextJs"
+    }
   }
+  
 ]

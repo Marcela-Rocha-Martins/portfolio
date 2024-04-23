@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import LikeIconWhoPage from "../images/WhoPageLikeIcon.svg";
-import LikedIconWhoPage from "../images/WhoPageLikedIcon.svg";
+import LikeIconWhoPage from "../images/whoPageIcons/WhoPageLikeIcon.svg";
+import LikedIconWhoPage from "../images/whoPageIcons/WhoPageLikedIcon.svg";
 
 function LikeButton(bodyColumn2CenterBottomP, { textId }) {
   const [liked, setLiked] = useState(false);
