@@ -1,6 +1,6 @@
 .ContactContainerMOB {
   width: 100%;
-  height: calc(100vh - 152px);
+  height: calc(100vh - 140px);
   display: flex;
   position: relative;
   background: white;

@@ -16,9 +16,6 @@ const WindowMobile = ({
   setWindowName,
   application
 }) => {
-  // function closeWindow() {
-  //   setIsVisible(false);
-  // }
 
   //logic behind the pages display
   let windowComponent;
@@ -72,9 +69,7 @@ const WindowMobile = ({
       {windowComponent && (
         <div className="pageComponentWrapper">{windowComponent}</div>
       )}
-      {/* <button onClick={closeWindow} className="WindowMobile-Button">
-        close window
-      </button> */}
+    
     </div>
   );
 };
