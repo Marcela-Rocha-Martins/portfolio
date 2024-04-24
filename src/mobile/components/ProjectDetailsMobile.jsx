@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "../pages/styles/Projects-Mobile.css";
 import gitHubIcon from "../../images/github-icon.svg";
 import liveIcon from "../../images/live-icon.svg";
+import closeIcon from "../images/icons/Close-Icon.svg"
 
 const ProjectDetailsMobile = ({ project, onClose }) => {
   return (
     <div className="projectDetailsContainerMOB">
       <div className="projectDetailsMOB">
         <div className="closeButtonMOB" onClick={onClose}>
-          <p>X</p>
+          <div style={{backgroundImage:`url(${closeIcon})`}}></div>
         </div>
         {/* video -------- */}
         <div className="projectVideoWrapperMOB">
@@ -16,8 +17,9 @@ const ProjectDetailsMobile = ({ project, onClose }) => {
             <video
               key={`video_${project.id}`}
               className="projectVideoMOB"
-              autoPlay
+              playsInline
               loop
+              preload
               muted
             >
               <source
