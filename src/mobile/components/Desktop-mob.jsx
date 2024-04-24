@@ -33,7 +33,7 @@ const DesktopMobile = () => {
       <HeaderMobile />
       <div
         className="DesktopMobile-Container"
-        style={{ width: "100%", justifySelf: "start" }}
+        style={{ width: "100vw", justifySelf: "start" }}
       >
         <AppsContainer
           isVisible={isVisible}
