@@ -164,7 +164,7 @@
 
 .WhoPageMob-Container-Review-Content-Top p {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   color: #4343438e;
   font-weight: 650;
 }
@@ -210,7 +210,7 @@
 }
 
 .WhoPageMob-Container-Review-Testimonials-TitleJob {
-  font-size: 10px;
+  font-size: 12px;
   color: #4343438e;
   font-weight: 500;
 }
@@ -221,7 +221,7 @@
 }
 
 .WhoPageMob-Container-Review-Testimonials-Recommendations {
-  font-size: 11px;
+  font-size: 12px;
   color: #434343;
   display: flex;
   flex-direction: column;
@@ -253,7 +253,7 @@
 
 .WhoPageMob-Container-Review-Testimonials-Bottom p {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #4067b2;
 }
