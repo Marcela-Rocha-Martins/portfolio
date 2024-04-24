@@ -1,10 +1,10 @@
 .FooterMobile-container {
   background: #f2e9d8;
   position: fixed;
-  height: 180px;
+  height: 112px;
   width: 100vw;
+  padding-bottom: 15px;
   border-top: 2px #434343 solid;
-  padding-bottom: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
