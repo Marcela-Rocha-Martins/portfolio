@@ -3,14 +3,28 @@
   height: calc(100vh - (140px));
   position: absolute;
   top: 40px;
+  overflow-x: hidden;
 }
 
 .WindowMobile {
-  width: auto;
-  height: auto;
+  width: 100vw;
+  height: calc(100vh - (140px));
   display: flex;
   flex-direction: column;
-  position: relative; 
+  position: relative;
   height: 100%;
-  background: #F4EFEE;
+  background: #f4efee;
+}
+
+.IamHereAsASafeSpace {
+  width: 100vw;
+  height: 130px;
+  background: #f4efee;
+  overflow: hidden;
+  border: red 2px solid;
+}
+
+.pageComponentWrapper {
+  height: auto;
+  width: 100vw;
 }

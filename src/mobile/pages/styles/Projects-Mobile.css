@@ -8,7 +8,8 @@
   align-items: center;
   padding: 20px;
   padding-top: 0;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -40,6 +41,13 @@
   width: 100%;
 }
 
+input[type="text" i] {
+  padding-block: 1px;
+  padding-inline: 2px;
+  font-size: 14px;
+  color:#434343;
+}
+
 .inputMOB input:focus {
   outline: none;
 }
@@ -55,7 +63,6 @@
   height: 100%;
   width: 100%;
   display: grid;
-  overflow: auto;
   grid-template-columns: 1fr 1fr;
   gap: 4px;
   padding: 8px;
@@ -98,9 +105,9 @@
   z-index: 999;
   background-color: #f4efee;
   padding: 20px;
-
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .closeButtonMOB {
@@ -112,7 +119,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 8000000;
+  z-index: 9999999;
 }
 
 .closeButtonMOB > div {
@@ -130,7 +137,6 @@
   justify-content: flex-end;
   position: relative;
   max-width: 90vw;
-  
   flex-shrink: 0;
   border-radius: 16px;
   background: transparent;
@@ -138,7 +144,6 @@
 }
 
 .projectVideoMOB {
-  height: auto;
   flex-shrink: 0;
   object-fit: cover;
   max-height: 250px;

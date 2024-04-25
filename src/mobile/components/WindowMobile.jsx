@@ -14,9 +14,8 @@ const WindowMobile = ({
   appsFoldersList,
   windowName,
   setWindowName,
-  application
+  application,
 }) => {
-
   //logic behind the pages display
   let windowComponent;
   if (windowName === "Contact") {
@@ -60,17 +59,21 @@ const WindowMobile = ({
         projects={projects}
         appsFoldersList={appsFoldersList}
         setWindowName={setWindowName}
-      
       />
     );
   }
   return (
-    <div className="WindowMobile">
-      {windowComponent && (
-        <div className="pageComponentWrapper">{windowComponent}</div>
-      )}
-    
-    </div>
+    <>
+      <div className="WindowMobile">
+        {windowComponent && (
+          <>
+            <div className="pageComponentWrapper">
+              {windowComponent}
+            </div>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 

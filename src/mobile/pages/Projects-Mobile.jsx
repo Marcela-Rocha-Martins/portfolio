@@ -56,13 +56,13 @@ const ProjectsPageMob = ({ projects }) => {
 
   return (
     <div>
-      <div className="projectContainerMOB" style={{ overflow: "scroll" }}>
+      <div className="projectContainerMOB">
         <div className="searchBarMOB">
           <div className="inputMOB">
             <div>
               <input
                 type="text"
-                placeholder="Search one technology here..."
+                placeholder="Search a technology here"
                 value={searchTerm}
                 onChange={handleInputChange}
                 onClick={handleInputClick}
@@ -82,45 +82,55 @@ const ProjectsPageMob = ({ projects }) => {
             onClick={handleSearchClick}
           ></div>
         </div>
-
-        <div className="projectMenuListMOB" style={{ overflow: "scroll" }}>
-          {filteredData.map((project) => (
-            <div
-              className="menuWrapperMOB"
-              onClick={() => {
-                if (project.name === "Code Pen") {
-                  window.location.href =
-                    "https://codepen.io/Marcela-Rocha-Martins/pens/showcase";
-                } else {
-                  openProject(project);
-                }
-              }}
-            >
+        <div style={{overflowY: "scroll", overflowX: "hidden"}}>
+          <div className="projectMenuListMOB">
+            {filteredData.map((project) => (
               <div
-                className="projectPhotoMOB"
-                style={{
-                  backgroundImage: `url(${project.details.photo})`,
-                  backgroundSize: "cover",
+                className="menuWrapperMOB"
+                onClick={() => {
+                  if (project.name === "Code Pen") {
+                    window.location.href =
+                      "https://codepen.io/Marcela-Rocha-Martins/pens/showcase";
+                  } else {
+                    openProject(project);
+                  }
                 }}
-              ></div>
-              <div
-                key={project.id}
-                onClick={() => openProject(project)}
-                className={selectedProject === project ? "active" : "null"}
               >
-                {project.name}
+                <div
+                  className="projectPhotoMOB"
+                  style={{
+                    backgroundImage: `url(${project.details.photo})`,
+                    backgroundSize: "cover",
+                  }}
+                ></div>
+                <div
+                  key={project.id}
+                  onClick={() => openProject(project)}
+                  className={selectedProject === project ? "active" : "null"}
+                >
+                  {project.name}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div
+            className="IamJustASafeSpace"
+            style={{
+              width: "100vw",
+              height: "180px",
+              border: "red 2px solid",
+            }}
+          ></div>
         </div>
       </div>
-      {projectActive && (
-        console.log("its workinggggg bitch"),
-        <ProjectDetailsMobile
-          project={selectedProject}
-          onClose={closeProjectDetails}
-        />
-      )}
+      {projectActive &&
+        (console.log("its workinggggg bitch"),
+        (
+          <ProjectDetailsMobile
+            project={selectedProject}
+            onClose={closeProjectDetails}
+          />
+        ))}
     </div>
   );
 };

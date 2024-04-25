@@ -2,14 +2,14 @@ import React from "react";
 import "../pages/styles/Projects-Mobile.css";
 import gitHubIcon from "../../images/github-icon.svg";
 import liveIcon from "../../images/live-icon.svg";
-import closeIcon from "../images/icons/Close-Icon.svg"
+import closeIcon from "../images/icons/Close-Icon.svg";
 
 const ProjectDetailsMobile = ({ project, onClose }) => {
   return (
     <div className="projectDetailsContainerMOB">
       <div className="projectDetailsMOB">
         <div className="closeButtonMOB" onClick={onClose}>
-          <div style={{backgroundImage:`url(${closeIcon})`}}></div>
+          <div style={{ backgroundImage: `url(${closeIcon})` }}></div>
         </div>
         {/* video -------- */}
         <div className="projectVideoWrapperMOB">
@@ -17,10 +17,10 @@ const ProjectDetailsMobile = ({ project, onClose }) => {
             <video
               key={`video_${project.id}`}
               className="projectVideoMOB"
+              autoplay
+              muted
               playsInline
               loop
-              preload
-              muted
             >
               <source
                 src={`${window.location.origin}${project.details.video}`}
@@ -38,9 +38,9 @@ const ProjectDetailsMobile = ({ project, onClose }) => {
         {/* txt -------- */}
         <div className="bottomContentMOB">
           <div className="bottomTextsMOB">
-          <div className="projectNameMOB">
-          <h2>{project.name}</h2>
-        </div>
+            <div className="projectNameMOB">
+              <h2>{project.name}</h2>
+            </div>
             <div className="bottomDetailsMOB">
               <div
                 className="projectDescriptionMOB"
@@ -64,9 +64,7 @@ const ProjectDetailsMobile = ({ project, onClose }) => {
             {project.details.title === "My Portfolio" ? (
               <button
                 className="buttonGitHubLiveMOB"
-                onClick={() =>
-                  (window.location.href = project.details.github)
-                }
+                onClick={() => (window.location.href = project.details.github)}
               >
                 <div
                   className="buttonIconMOB"
@@ -97,9 +95,7 @@ const ProjectDetailsMobile = ({ project, onClose }) => {
 
                 <div
                   className="buttonGitHubLiveMOB"
-                  onClick={() =>
-                    (window.location.href = project.details.live)
-                  }
+                  onClick={() => (window.location.href = project.details.live)}
                 >
                   <div
                     className="buttonIconMOB"
@@ -112,6 +108,14 @@ const ProjectDetailsMobile = ({ project, onClose }) => {
           </div>
         </div>
       </div>
+      <div
+        className="IamJustASafeSpace"
+        style={{
+          width: "70vw",
+          height: "180px",
+          border: "red 2px solid",
+        }}
+      ></div>
     </div>
   );
 };
