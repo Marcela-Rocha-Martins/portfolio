@@ -15,17 +15,14 @@ const ProjectDetailsMobile = ({ project, onClose }) => {
         <div className="projectVideoWrapperMOB">
           {project.details.video ? (
             <video
+              autoplay
+              loop
+              muted
+              playsinline
+              src={`${window.location.origin}${project.details.video}`}
               key={`video_${project.id}`}
               className="projectVideoMOB"
-              autoplay
-              muted
-              playsInline
-              loop
-            >
-              <source
-                src={`${window.location.origin}${project.details.video}`}
-              />
-            </video>
+            ></video>
           ) : null}
           <div className="projectTechnologiesMOB">
             {project.details.technologies.map((technology) => (
