@@ -14,29 +14,27 @@ const ProjectDetailsMobile = ({ project, onClose }) => {
         {/* video -------- */}
         <div className="projectVideoWrapperMOB">
           {project.details.video ? (
-            <img
-            key={`gif_${project.id}`}
-            className="projectVideoMOB"
-            src={`${window.location.origin}${project.details.video}`}
-            alt="GIF"
-          />
-            // <video
-            //   autoplay
-            //   loop
-            //   muted
-            //   playsinline
-            //   src={`${window.location.origin}${project.details.video}`}
-            //   key={`video_${project.id}`}
-            //   className="projectVideoMOB"
-            // ></video>
-          ) : null}
-          <div className="projectTechnologiesMOB">
-            {project.details.technologies.map((technology) => (
-              <div className="technologyTagMOB" key={technology.id}>
-                {technology}
+            <>
+              <div className="videoWrapperMOB">
+                <iframe
+                  key={`video_${project.id}`}
+                  title={`video_${project.id}`}
+                  className="projectVideoMOB"
+                  src={project.details.video}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  frameborder="0"
+                  mute="1"
+                ></iframe>
               </div>
-            ))}
-          </div>
+              <div className="projectTechnologiesMOB">
+                {project.details.technologies.map((technology) => (
+                  <div className="technologyTagMOB" key={technology.id}>
+                    {technology}
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : null}
         </div>
         {/* txt -------- */}
         <div className="bottomContentMOB">
@@ -44,6 +42,16 @@ const ProjectDetailsMobile = ({ project, onClose }) => {
             <div className="projectNameMOB">
               <h2>{project.name}</h2>
             </div>
+            {!project.details.video && (
+              <div className="projectTechnologiesMOB2">
+                {project.details.technologies.map((technology) => (
+                  <div className="technologyTagMOB" key={technology.id}>
+                    {technology}
+                  </div>
+                ))}
+              </div>
+            )}
+
             <div className="bottomDetailsMOB">
               <div
                 className="projectDescriptionMOB"
@@ -58,10 +66,10 @@ const ProjectDetailsMobile = ({ project, onClose }) => {
             className="buttonsMOB"
             style={{
               display: "flex",
-              flexDirection: "column",
-              gap: "6px",
+              gap: "8px",
               marginTop: "5%",
-              marginLeft: "5%",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             {project.details.title === "My Portfolio" ? (
@@ -116,7 +124,6 @@ const ProjectDetailsMobile = ({ project, onClose }) => {
         style={{
           width: "70vw",
           height: "180px",
-          border: "red 2px solid",
         }}
       ></div>
     </div>

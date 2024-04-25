@@ -7,7 +7,7 @@
 .leftColumn {
   overflow: hidden;
   width: 376px;
-  height: 100vh;
+  height: auto;
 }
 
 .searchBar {
@@ -54,6 +54,7 @@
   padding: 24px;
   padding-top: 36px;
 }
+
 .menuWrapper {
   display: flex;
   flex-direction: column;
@@ -69,6 +70,7 @@
   font-weight: 600;
   line-height: normal;
   cursor: pointer;
+  z-index: 9999999;
 }
 
 .rightColumn {
@@ -76,7 +78,7 @@
   width: 200px;
   flex-direction: column;
   padding-top: 40px;
-  height: auto;
+  height: 100;
   border-left: 2px solid #434343;
   flex: 1;
 }
@@ -120,7 +122,8 @@
 }
 
 .projectVideo {
-  height: auto;
+  height: 300px;
+  width:500px;
   flex-shrink: 0;
   object-fit: cover;
   border-radius: 16px;
@@ -137,6 +140,11 @@
   border: 6px solid #f6f4f4;
   border-radius: 16px;
   filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
+}
+
+.projectDescription img{
+  border-radius: 8px;
+  max-width: 100vw;
 }
 
 .projectPhoto:hover {
@@ -198,11 +206,11 @@ filter: none;
   display: inline-flex;
   align-self: flex-end;
   padding: 0px 8px;
+  margin-bottom: 8px;
   border-radius: 8px;
   border: 2px solid #434343;
   background: #ffd042;
 }
-
 
 .projectTechnologies{
   display: flex;

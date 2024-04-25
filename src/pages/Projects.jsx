@@ -110,6 +110,20 @@ function Projects({ projects }) {
               <>
                 <div className="projectVideoWrapper">
                   {selectedProject.details.video ? (
+                    <div className="videoWrapper">
+                      <iframe
+                        key={`video_${selectedProject.id}`}
+                        title={`video_${selectedProject.id}`}
+                        className="projectVideo"
+                        src={selectedProject.details.video}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        frameborder="0"
+                        mute="1"
+                      ></iframe>
+                    </div>
+                  ) : null}
+
+                  {/* {selectedProject.details.video ? (
                     <video
                       key={`video_${selectedProject.id}`}
                       className="projectVideo"
@@ -118,10 +132,10 @@ function Projects({ projects }) {
                       muted
                     >
                       <source
-                        src={`${window.location.origin}${selectedProject.details.video}`}
+                        src={selectedProject.details.video}
                       />
                     </video>
-                  ) : null}
+                  ) : null} */}
                   <div className="projectTechnologies">
                     {selectedProject.details.technologies.map((technology) => (
                       <div className="technologyTag" key={technology.id}>

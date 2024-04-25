@@ -82,7 +82,12 @@ const ProjectsPageMob = ({ projects }) => {
             onClick={handleSearchClick}
           ></div>
         </div>
-        <div style={{overflowY: "scroll", overflowX: "hidden"}}>
+        <div
+          style={{
+            overflowY: "scroll",
+            overflowX: "hidden",        
+          }}
+        >
           <div className="projectMenuListMOB">
             {filteredData.map((project) => (
               <div
@@ -117,8 +122,8 @@ const ProjectsPageMob = ({ projects }) => {
             className="IamJustASafeSpace"
             style={{
               width: "100vw",
-              height: "180px",
-              border: "red 2px solid",
+              height: "400px",
+              bottom: "0",
             }}
           ></div>
         </div>

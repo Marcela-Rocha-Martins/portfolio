@@ -20,7 +20,7 @@
   background: #ffffff;
   border-bottom: 2px solid #434343;
   width: 100vw;
-  height: 50px;
+  height: 80px;
   display: flex;
   margin-bottom: 14px;
 }
@@ -133,7 +133,7 @@ input[type="text" i] {
   padding-top: 0px;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: flex-end;
   position: relative;
   max-width: 90vw;
@@ -146,7 +146,8 @@ input[type="text" i] {
 .projectVideoMOB {
   flex-shrink: 0;
   object-fit: cover;
-  max-height: 250px;
+  height: 250px;
+  width: 90vw;
   border-radius: 16px;
   margin-top: 12px;
   border: 2px solid #434343;
@@ -164,10 +165,19 @@ input[type="text" i] {
   display: inline-flex;
   align-self: flex-end;
   padding: 0px 8px;
+  margin-bottom: 8px;
   border-radius: 8px;
   border: 2px solid #434343;
   background: #d9a18f;
   font-size: 12px;
+}
+
+.projectTechnologiesMOB2 {
+  display: flex;
+  gap: 5px;
+  justify-content:flex-start;
+  width: 100%;
+  margin-top: 8px;
 }
 
 .projectDetailsMOB h2 {
@@ -185,6 +195,7 @@ input[type="text" i] {
 .bottomContentMOB {
   margin: 12px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
 }
