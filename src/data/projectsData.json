@@ -6,7 +6,7 @@
       "title": "Cat x Machine",
       "description": "Browser-based game developed with <strong>HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP)</strong>. Cat X Machine is a simple web-based game where you control a cat character, attempting to avoid machines while collecting snacks to gain lives. Click on the <strong>'Live'</strong> button and use the keyboard to control the cat's jumping and crouching movements.",
       "technologies": ["CSS", "JavaScript", "HTML", "DOM manipulation", "OOP"],
-      "video": "/projectPagePhotos/CatxMachine.mp4",
+      "video": "/projectPageGifs/CatxMachine.gif",
       "photo": "/projectPagePhotos/CatXMachine.png",
       "live": "https://marcela-rocha-martins.github.io/project-game-catXmachine/",
       "github": "https://github.com/Marcela-Rocha-Martins/project-game-catXmachine"
