@@ -6,7 +6,7 @@ import DesktopMobile from "./mobile/components/Desktop-mob.jsx";
 import { useMediaQuery } from "react-responsive";
 
 function App() {
-  const isTabletOrMobile = useMediaQuery({ maxWidth: 768 });
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 1024 });
 
   return (
     <div className="App">

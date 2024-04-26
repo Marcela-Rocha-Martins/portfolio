@@ -110,6 +110,32 @@ function Projects({ projects }) {
               <>
                 <div className="projectVideoWrapper">
                   {selectedProject.details.video ? (
+                    <>
+                      <div className="videoWrapper">
+                        <iframe
+                          key={`video_${selectedProject.id}`}
+                          title={`video_${selectedProject.id}`}
+                          className="projectVideo"
+                          src={selectedProject.details.video}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          frameborder="0"
+                          mute="1"
+                        ></iframe>
+                      </div>
+                      <div className="projectTechnologies">
+                        {selectedProject.details.technologies.map(
+                          (technology) => (
+                            <div className="technologyTag" key={technology.id}>
+                              {technology}
+                            </div>
+                          )
+                        )}
+                      </div>
+                    </>
+                  ) : null}
+                </div>
+                {/* <div className="projectVideoWrapper">
+                  {selectedProject.details.video ? (
                     <div className="videoWrapper">
                       <iframe
                         key={`video_${selectedProject.id}`}
@@ -122,20 +148,6 @@ function Projects({ projects }) {
                       ></iframe>
                     </div>
                   ) : null}
-
-                  {/* {selectedProject.details.video ? (
-                    <video
-                      key={`video_${selectedProject.id}`}
-                      className="projectVideo"
-                      autoPlay
-                      loop
-                      muted
-                    >
-                      <source
-                        src={selectedProject.details.video}
-                      />
-                    </video>
-                  ) : null} */}
                   <div className="projectTechnologies">
                     {selectedProject.details.technologies.map((technology) => (
                       <div className="technologyTag" key={technology.id}>
@@ -143,7 +155,7 @@ function Projects({ projects }) {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div> */}
 
                 <div className="bottomContent">
                   <div className="bottomTexts">
@@ -151,6 +163,20 @@ function Projects({ projects }) {
                       <div className="projectTitle">
                         {selectedProject.details.title}
                       </div>
+                      {!selectedProject.details.video && (
+                        <div className="projectTechnologies2">
+                          {selectedProject.details.technologies.map(
+                            (technology) => (
+                              <div
+                                className="technologyTag2"
+                                key={technology.id}
+                              >
+                                {technology}
+                              </div>
+                            )
+                          )}
+                        </div>
+                      )}
                       <div
                         className="projectDescription"
                         dangerouslySetInnerHTML={{

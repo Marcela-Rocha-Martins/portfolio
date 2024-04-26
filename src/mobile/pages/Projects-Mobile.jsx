@@ -75,7 +75,7 @@ const ProjectsPageMob = ({ projects }) => {
             className="squareMOB"
             style={{
               backgroundImage: `url(${searchIcon})`,
-              backgroundSize: "32px 32px",
+              backgroundSize: "24px 24px",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
             }}

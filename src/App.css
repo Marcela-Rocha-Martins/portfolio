@@ -211,6 +211,7 @@
   flex-direction: column;
   gap: 16px;
   padding: 16px;
+  z-index: 999;
 }
 
 .homeMenuItems {
