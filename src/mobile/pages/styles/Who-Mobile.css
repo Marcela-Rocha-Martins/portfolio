@@ -117,14 +117,15 @@
   margin-right: 24px;
   margin-left: 24px;
   margin-bottom: 10px;
-  max-height: auto;
+  height: 100vh;
   padding: 24px;
 }
 
 .WhoPageMob-Container-Body-Profile {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr;
   gap: 24px;
+  height: 100%;
 }
 
 .WhoPageMob-Container-Body-Profile-Summary {
@@ -141,9 +142,12 @@
 }
 
 .WhoPageMob-Container-Body-Profile-Photo {
-  width: auto;
-  height: 182px;
+  width: 100%;
+  min-height: 200px;
+  max-height: 400px;
   background-size: cover;
+  background-position: center;
+  border-radius: 8px;
 }
 
 .WhoPageMob-Container-Review {
@@ -159,7 +163,6 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-
 }
 
 .WhoPageMob-Container-Review-Content-Top p {
@@ -173,13 +176,11 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-
 }
 
 .WhoPageMob-Container-Review-Testimonials-Title {
   display: flex;
   gap: 9px;
-
 }
 
 .WhoPageMob-Container-Review-Testimonials-TitleIMG {
@@ -191,7 +192,6 @@
   border: 2.5px solid #ffffff;
   box-shadow: 0 0 0 2px #4067b2;
   margin-left: 8px;
-
 }
 
 .WhoPageMob-Container-Review-Testimonials-TitleTXT {
@@ -199,14 +199,12 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
 }
 
 .WhoPageMob-Container-Review-Testimonials-TitleName {
   font-size: 14px;
   color: #4067b2;
   font-weight: 600;
-  
 }
 
 .WhoPageMob-Container-Review-Testimonials-TitleJob {
@@ -216,7 +214,7 @@
 }
 
 .WhoPageMob-Container-Review-Testimonials-TitleJob p,
-.WhoPageMob-Container-Review-Testimonials-TitleName p{
+.WhoPageMob-Container-Review-Testimonials-TitleName p {
   margin: 0;
 }
 
@@ -226,7 +224,6 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-
 }
 
 .WhoPageMob-Container-Review-Testimonials-Recommendations p {
@@ -243,7 +240,11 @@
   padding: 20px;
   padding-bottom: 40px;
   justify-content: flex-end;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.32) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
   margin-right: 8px;
   border-radius: 4px;
   position: sticky;

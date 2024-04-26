@@ -246,7 +246,7 @@ function Who({
                 <span>
                   <img src={CakeIconWhoPage} alt="cake icon" />{" "}
                 </span>
-                Born on 1992
+                Born in 1992
               </p>
             </div>
             <div

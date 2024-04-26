@@ -324,7 +324,7 @@ const WhoPageMob = ({
                       color: "#434343a8",
                     }}
                   >
-                    Born on 1992
+                    Born in 1992
                   </p>
                 </div>
               </div>
