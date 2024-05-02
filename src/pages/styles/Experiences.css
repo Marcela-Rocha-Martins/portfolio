@@ -21,7 +21,6 @@
   margin-left: 4%;
   margin-right: 4%;
   z-index: 1;
-
 }
 
 .profilePhotoExperiencePg {
@@ -140,6 +139,13 @@ hr {
   border: 2px solid #434343;
   background: rgba(253, 188, 75, 0);
 }
+.aElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 44px;
+}
 
 .downloadGitHub {
   width: 27px;
@@ -232,12 +238,12 @@ hr {
 }
 
 .allContentWork2 {
-    display: flex;
-    flex: 0 0 calc(50% - 20px);
-    gap: 12px;
-  }
+  display: flex;
+  flex: 0 0 calc(50% - 20px);
+  gap: 12px;
+}
 
-  .nonDegree{
-    display: flex;
-    flex-wrap: wrap;
-  }
+.nonDegree {
+  display: flex;
+  flex-wrap: wrap;
+}

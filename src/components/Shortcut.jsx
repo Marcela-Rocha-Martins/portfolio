@@ -48,6 +48,7 @@ const Shortcut = ({
       // console.log (updatedPage, "updatedPage");
     }
     setActiveWindows(clickedWindows);
+    console.log(clickedWindows, "clickedWindows")
   }
 
   return (

@@ -61,12 +61,12 @@
 .Container-Header-Top-Content-Location {
   display: flex;
 }
-.locationTxt {
+.locationTxtMOB {
   font-size: 14px;
   color: #ffffff;
   margin: 0;
 }
-.locationIcon {
+.locationIconMOB {
   filter: brightness(0) saturate(100%) invert(100%);
 }
 

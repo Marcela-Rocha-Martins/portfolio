@@ -28,8 +28,8 @@ const Window = ({
 }) => {
   const [isMaximized, setIsMaximized] = useState(false);
   const [position, setPosition] = useState({
-    top: 150 + 46 * index,
-    left: 150 + 46 * index,
+    top: 15 + 30 * index,
+    left: 200 + 30 * index,
   });
   const [isDragging, setIsDragging] = useState(false);
 

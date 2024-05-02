@@ -60,9 +60,10 @@ const Experience = () => {
           </button>
 
           <div className="secondLineButtonsExperience">
-            <a
-              href="/MarcelaRocha-WebDEV.pdf"
-              download="MarcelaRocha-WebDEV.pdf"
+            <a 
+              className="aElement"
+              href="/MarcelaRochaWEBDEVCV.pdf"
+              download="MarcelaRochaWEBDEVCV.pdf"
             >
               <div className="iconsExperiences">
                 <div
@@ -72,7 +73,7 @@ const Experience = () => {
               </div>
             </a>
 
-            <button
+            <div
               onClick={() =>
                 (window.location.href =
                   "https://github.com/Marcela-Rocha-Martins")
@@ -83,7 +84,8 @@ const Experience = () => {
                 className="downloadGitHub"
                 style={{ backgroundImage: `url(${githubIcon})` }}
               ></div>
-            </button>
+            </div>
+
           </div>
         </div>
       </div>

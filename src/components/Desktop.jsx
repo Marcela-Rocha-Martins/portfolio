@@ -4,8 +4,10 @@ import Footer from "../components/Footer";
 import Windows from "../components/Windows";
 import projects from "../data/projectsData.json";
 
-const Desktop = ({isTabletOrMobile}) => {
-  const [activeWindows, setActiveWindows] = useState([]);
+const Desktop = ({ isTabletOrMobile }) => {
+  const [activeWindows, setActiveWindows] = useState([
+    { name: "Who am I", id: "who", zIndex: 1, isVisible: true },
+  ]);
   const [zIndex, setZIndex] = useState(0);
   const [maxZIndex, setMaxZIndex] = useState(0);
   const [minimized, setMinimized] = useState(false);
@@ -14,7 +16,7 @@ const Desktop = ({isTabletOrMobile}) => {
   const shortcutList = [
     { name: "Projects", id: "projects" },
     { name: "Who am I", id: "who" },
-    { name: "Experiences", id: "experiences" },  
+    { name: "Experiences", id: "experiences" },
     { name: "Contact", id: "contact" },
   ];
 
@@ -65,6 +67,6 @@ const Desktop = ({isTabletOrMobile}) => {
         isTabletOrMobile={isTabletOrMobile}
       />
     </>
-    );
+  );
 };
 export default Desktop;

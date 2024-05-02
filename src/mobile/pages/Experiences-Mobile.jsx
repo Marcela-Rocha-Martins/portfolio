@@ -28,13 +28,13 @@ const ExperiencesPageMob = () => {
             <h3 className="Container-Header-Top-Content-Job">Web Developer</h3>
             <div className="Container-Header-Top-Content-Location">
               <div
-                className="locationIcon"
+                className="locationIconMOB"
                 style={{
                   backgroundImage: `url(${locationIcon})`,
                   backgroundSize: "cover",
                 }}
               ></div>
-              <p className="locationTxt"> Berlin, Germany</p>
+              <p className="locationTxtMOB"> Berlin, Germany</p>
             </div>
           </div>
         </div>
@@ -54,8 +54,8 @@ const ExperiencesPageMob = () => {
               ></div>
             </button>
             <a
-              href="/MarcelaRocha-WebDEV.pdf"
-              download="MarcelaRocha-WebDEV.pdf"
+              href="/MarcelaRochaWEBDEVCV.pdf"
+              download="MarcelaRochaWEBDEVCV.pdf"
             >
               <div className="Container-Header-Buttons-Left-Download">
                 <div

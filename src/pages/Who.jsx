@@ -282,7 +282,7 @@ function Who({
               <br />
               <br />
               I'm 31 years old, originally from Brazil, now calling Berlin home
-              with my husband and our three cats. With over a decade in
+              with my husband and our three cats (I hold a Family Reunion Visa, which grants me permission to work in Germany). With over a decade in
               communication and marketing.
               <br />
               <br />
