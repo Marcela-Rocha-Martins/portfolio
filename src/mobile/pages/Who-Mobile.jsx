@@ -208,7 +208,7 @@ const WhoPageMob = ({
         </div>
       </div>
       {/* ------------- corpo da página - conteúdo ------------- */}
-      <div className="WhoPageMob-Container-Body">
+      <div className="WhoPageMob-Container-Body" style={{border: "2px solid red"}}>
         {selectedItem === "profile" ? (
           <div className="WhoPageMob-Container-Body-Profile">
             <div className="WhoPageMob-Container-Body-Profile-Summary">
